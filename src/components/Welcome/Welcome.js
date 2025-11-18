@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import styles from "./Welcome.module.scss";
 
 // prettier-ignore
@@ -23,18 +24,22 @@ const Welcome = () => {
 
       <div class=${styles.welcomeContent}>
         <h3>Installed Packages</h3>
-        <ul class=${styles.itemList}>${packages.map((pkg) => `<li>${pkg}</li>`).join("")}</ul>
+        <ul class=${styles.itemList}>${packages
+    .map((pkg) => `<li>${pkg}</li>`)
+    .join("")}</ul>
 
         <br />
 
         <h3>Pre-Configurations</h3>
-        <ul class=${styles.itemList}>${preConfigs.map((config) => `<li>${config}</li>`).join("")}</ul>
+        <ul class=${styles.itemList}>${preConfigs
+    .map((config) => `<li>${config}</li>`)
+    .join("")}</ul>
       </div>
 
       <em>Copyright &copy; ${new Date().getFullYear()}</em>
     </header>
   `;
-
+  section.appendChild(Button({ content: "Get Started", variant: "outline" }));
   return section;
 };
 

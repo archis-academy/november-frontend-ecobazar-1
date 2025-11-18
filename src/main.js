@@ -6,6 +6,7 @@ const app = document.querySelector("#app");
 
 page("/", () => {
   app.appendChild(HomePage());
+  
 });
 
 page();
