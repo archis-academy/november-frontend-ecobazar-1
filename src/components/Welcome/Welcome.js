@@ -1,5 +1,6 @@
 import Button from "../Button/Button";
 import styles from "./Welcome.module.scss";
+import HeroSection from "../HeroSection/HeroSection";
 
 // prettier-ignore
 const packages = [
@@ -39,7 +40,8 @@ const Welcome = () => {
       <em>Copyright &copy; ${new Date().getFullYear()}</em>
     </header>
   `;
-  section.appendChild(Button({ content: "Get Started", variant: "outline" }));
+  // section.appendChild(Button({ content: "Get Started", variant: "outline" }));
+  // section.appendChild(HeroSection());
   return section;
 };
 
