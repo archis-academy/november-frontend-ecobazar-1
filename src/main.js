@@ -8,6 +8,7 @@ const app = document.querySelector("#app");
 
 page("/", async () => {
   storeData.category = await getCategories();
+  app.innerHTML = "";
   app.appendChild(HomePage());
 });
 

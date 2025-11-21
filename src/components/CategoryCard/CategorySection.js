@@ -14,7 +14,7 @@ const CategorySection = () => {
     container.innerHTML = `
     <div class="${styles.categoryHeader}">
         <h1 class="${styles.categoryTitle}">Popular Categories</h1>
-        <a class="${styles.categoryViewAllBtn}" href="/deneme">
+        <a class="${styles.categoryViewAllBtn}" href="#">
             <span>View All</span>
             <img src="/right-arrow.svg" alt="arrow">
         </a>
