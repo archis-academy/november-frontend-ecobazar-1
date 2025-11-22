@@ -1,4 +1,5 @@
-export function renderFeaturesSection() {
+import "@components/Features/features.css";
+export default function RenderFeaturesSection() {
   const section = document.createElement("section");
   section.className = "features-wrapper";
   section.innerHTML = `
@@ -21,7 +22,7 @@ export function renderFeaturesSection() {
         </div>
 
         <div class="feature-box">
-          <img src="images/shopping-bag.svg" alt="" />
+          <img src="/images/bag.svg" alt="" />
           <div class="feature-box-container">
             <h3>100% Secure Payment</h3>
             <p>We ensure your money is safe</p>

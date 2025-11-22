@@ -5,7 +5,9 @@
 
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+  grid-template-columns: repeat(4, 1fr); /* 4 sütun sabit */
+
   gap: 2rem;
   padding: 2rem;
   max-width: 1320px;
@@ -33,9 +35,11 @@
 }
 
 .feature-box img {
-  width: 40px;
+  /*width: 40px;
   height: 40px;
-  flex-shrink: 0;
+  flex-shrink: 0;*/
+  width: clamp(24px, 5vw, 48px);
+  height: auto;
   transition: transform 0.3s ease; /* yumuşak geçiş */
 }
 .feature-box:hover img {
@@ -64,22 +68,15 @@
   font-family: sans-serif;
   font-weight: 400;
 }
-/* Responsive: Tablet */
-@media (max-width: 768px) {
+/* Tablet görünümü (max 992px) */
+@media (max-width: 992px) {
   .features {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr); /* 2 sütun */
   }
 }
 
-/* Responsive: Mobile */
-@media (max-width: 480px) {
-  .feature-box {
-    flex-direction: column; /* ikon üstte, yazı altta */
-    text-align: center;
-  }
-
-  .feature-box img {
-    margin-bottom: 0.5rem;
+@media (max-width: 300px) {
+  .features {
+    grid-template-columns: 1fr; /* Tek sütun, alt alta */
   }
 }
