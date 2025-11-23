@@ -1,10 +1,12 @@
 import CategorySection from "@/components/CategoryCard/CategorySection";
+import Testimonials from "@/components/Testimonials/Testimonials";
 
 const HomePage = () => {
   const container = document.createElement("div");
 
   // category section has been added to Homepage.
   container.appendChild(CategorySection());
+  container.appendChild(Testimonials());
 
   return container;
 };

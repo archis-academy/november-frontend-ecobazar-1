@@ -1,0 +1,60 @@
+@use "@/styles/_variables.scss" as *;
+@use "@/styles/_functions.scss" as *;
+
+.test {
+    background: #F2F2F2;
+    padding-block: 60px;
+
+    &Content {
+        width: $Container-max-width;
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(32);
+        margin-inline: auto;
+    }
+
+    &HeaderWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &Title {
+        font-family: $Body-large-poppins;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 120%;
+        letter-spacing: 0%;
+    }
+
+    &SliderBtnWrapper {
+        display: flex;
+        gap: pxToRem(12);
+    }
+
+    &SliderBtn {
+        width: 45px;
+        height: 45px;
+        border-radius: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+
+        &:nth-child(1) {
+            background: #fff;
+        }
+
+        &:nth-child(2) {
+            background: #00B207;
+        }
+
+    }
+
+    &CardWrapper {
+        display: flex;
+        gap: pxToRem(24);
+    }
+
+}

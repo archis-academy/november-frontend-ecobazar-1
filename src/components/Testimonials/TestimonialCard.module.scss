@@ -1,0 +1,80 @@
+@use "@/styles/_variables.scss" as *;
+@use "@/styles/_functions.scss" as *;
+
+.card {
+    max-width: 425px;
+    font-family: $Body-large-poppins;
+    padding: 24px;
+    background: white;
+    border-radius: pxToRem(8);
+    box-shadow: 0px 10px 20px 0px #00000003;
+
+    &Content {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(16);
+
+        img {
+            width: 32px;
+            height: 26px;
+            // opacity: 30%;
+        }
+    }
+
+
+    &Text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        color: #4D4D4D;
+    }
+
+    &Footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &Person {
+        display: flex;
+        align-items: center;
+        gap: pxToRem(12);
+
+        img {
+            width: 56px;
+            height: 56px;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &PersonInfo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &PersonName {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #1A1A1A;
+    }
+
+    &PersonDetail {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        color: #999999;
+    }
+
+    &StarWrapper{
+        display: flex;
+        gap: 1px;
+    }
+
+
+}
