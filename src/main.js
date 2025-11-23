@@ -10,6 +10,7 @@ page("/", async () => {
   storeData.category = await getCategories();
   app.innerHTML = "";
   app.appendChild(HomePage());
+  
 });
 
 page();
