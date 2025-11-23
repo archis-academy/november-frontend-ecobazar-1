@@ -1,6 +1,7 @@
 import styles from "./Testimonials.module.scss";
 import TestimonialCard from "./TestimonialCard";
-import Arrow from "./Arrow";
+import SliderButton from "./SliderButton";
+
 
 const testData = {
     fullName: "Robert Fox",
@@ -13,6 +14,10 @@ const testData = {
 const renderCards = (container) => {
     const wrapper = container.querySelector(`.${styles.testCardWrapper}`);
     wrapper.appendChild(TestimonialCard(testData));
+
+    const buttonWrapper = container.querySelector(`.${styles.testSliderBtnWrapper}`);
+    buttonWrapper.appendChild(SliderButton({ color: "black", deg: 180 }));
+    buttonWrapper.appendChild(SliderButton({ color: "white", deg: 0 }));
 }
 
 const Testimonials = () => {
@@ -23,14 +28,7 @@ const Testimonials = () => {
     <div class=${styles.testContent}>
         <div class=${styles.testHeaderWrapper}>
             <h1 class=${styles.testTitle}>Client Testimonials</h1>
-            <div class=${styles.testSliderBtnWrapper}>
-                <button class=${styles.testSliderBtn}>
-                    ${Arrow("black", 180)}
-                </button>
-                <button class=${styles.testSliderBtn}>
-                    ${Arrow("white", 0)}
-                </button>
-            </div>
+            <div class=${styles.testSliderBtnWrapper}></div>
         </div>
         <div class=${styles.testCardWrapper}></div>
     </div>
