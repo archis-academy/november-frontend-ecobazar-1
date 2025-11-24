@@ -50,11 +50,25 @@
             background: #00B207;
         }
 
+        * {
+            pointer-events: none;
+        }
+
     }
 
     &CardWrapper {
         display: flex;
         gap: pxToRem(24);
+        overflow: hidden;
+    }
+
+    &GroupWrapper {
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        gap: pxToRem(24);
+        transition: all 400ms linear;
+        transform: translateX(0);
     }
 
 }

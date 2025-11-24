@@ -2,12 +2,15 @@
 @use "@/styles/_functions.scss" as *;
 
 .card {
-    max-width: 425px;
+    width: $Testimonials-card-width;
+    max-width: $Testimonials-card-width;
+    min-width: $Testimonials-card-width;
     font-family: $Body-large-poppins;
     padding: 24px;
     background: white;
     border-radius: pxToRem(8);
     box-shadow: 0px 10px 20px 0px #00000003;
+    flex: 1;
 
     &Content {
         display: flex;
@@ -17,7 +20,6 @@
         img {
             width: 32px;
             height: 26px;
-            // opacity: 30%;
         }
     }
 

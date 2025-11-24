@@ -10,3 +10,15 @@ export const getCategories = async () => {
         console.error(err);
     }
 };
+
+
+export const getTestimonials = async ()=> {
+    try {
+        const response = await axios.get(`${API}/testimonials`);
+        return response.data;
+
+    } catch (error) {
+        console.log(error);
+        throw new Error(error);
+    }
+}
