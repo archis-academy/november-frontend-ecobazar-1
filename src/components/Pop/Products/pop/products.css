@@ -1,0 +1,91 @@
+.product-card {
+  max-width: 264px;
+  width: 100%;
+  height: 327px;
+  background-color: white;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* animasyon */
+}
+.product-card:hover {
+  transform: translateY(-4px); /* hafif yukarı kalkar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* gölge eklenir */
+  cursor: pointer; /* kartın tamamı tıklanabilir gibi görünür */
+}
+.sale-label {
+  background-color: #ea4b48;
+  max-width: 80px;
+  font-family: var(--primary-font);
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  left: 20px; /* biraz sağa kaydırıldı */
+  height: 27px;
+  border-radius: 4px;
+  padding: 3px 8px; /* padding sadeleştirildi */
+  display: flex; /* yazıyı ortalamak için */
+  align-items: center; /* dikey ortalama */
+  justify-content: center; /* yatay ortalama */
+  color: #fff; /* yazı rengi kontrast için */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.sale-label:hover {
+  background-color: #ea4b48;
+  transform: scale(1.05); /* hafif büyür */
+  cursor: pointer; /* el işareti çıkar */
+}
+.product-image {
+  width: 100%;
+  height: auto;
+}
+.product-info-wrapper {
+  display: flex;
+  justify-content: space-between; /* sol yazılar - sağ ikon */
+  align-items: center;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column; /* alt alta */
+  gap: 6px;
+}
+
+.product-icon {
+  background: #f2f2f2;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.product-icon:hover {
+  background: #ea4b48; /* kırmızıya döner */
+  transform: scale(1); /* biraz büyür */
+}
+
+.product-icon img {
+  width: 20px;
+  height: 20px;
+  filter: invert(0); /* ikon rengi normal */
+}
+.product-icon:hover img {
+  filter: invert(1); /* hover’da ikon beyaz görünür */
+}
+p {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  color: #4d4d4d;
+}
+h3 {
+  font-family: var(--primary-font);
+}
+.product-rating {
+  color: gold; /* tüm yıldızlar sarı */
+  font-size: 16px;
+}
+.original-price {
+  color: #999999;
+  text-decoration: line-through;
+  margin-left: 2px;
+}
+.current-price {
+  margin-left: 6px;
+}
