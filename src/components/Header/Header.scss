@@ -1,0 +1,155 @@
+.parent {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  border-radius: 6px;
+  gap: 22px;
+}
+
+
+.left {
+  flex: 0 0 auto;
+
+  .location {
+    font-size: 12px;
+    color: #999;
+  }
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 32px;
+      height: auto;
+    }
+
+    .logoText {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2b2b2b;
+    }
+  }
+
+  .searchBox {
+    width: 420px;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .searchInput {
+      flex: 1;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 15px;
+      outline: none;
+
+      &:focus {
+        border-color: #26a65b;
+        box-shadow: 0 0 0 3px rgba(38, 166, 91, 0.12);
+      }
+    }
+
+    .searchBtn {
+      padding: 10px 16px;
+      background: #26a65b;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.92;
+      }
+
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .wishlistBtn {
+    border: none;
+    background: transparent;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background: #fafafa;
+    }
+  }
+
+  .cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #eee;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    svg {
+      display: block;
+    }
+
+    .cartPrice {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    &:hover {
+      background: #fafafa;
+    }
+  }
+}
+
+
+@media (max-width: 900px) {
+  .left {
+    display: none;
+  }
+
+  .searchBox {
+    max-width: 250px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .center {
+    flex-direction: column;
+    gap: 14px;
+
+    .searchBox {
+      width: 100%;
+      max-width: 100% !important;
+    }
+  }
+}
