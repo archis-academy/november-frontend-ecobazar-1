@@ -1,4 +1,3 @@
-import Button from "@/components/Button/Button";
 import CategorySection from "@/components/CategoryCard/CategorySection";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import HeroSection from "@/components/HeroSection/HeroSection";
