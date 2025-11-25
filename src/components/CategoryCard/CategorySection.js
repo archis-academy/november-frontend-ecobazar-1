@@ -3,8 +3,9 @@ import CategoryCard from "@/components/CategoryCard/CategoryCard";
 import { storeData } from "@/services/store";
 
 const renderCards = (container) => {
+    const { categories } = storeData;
     const wrapper = container.querySelector(`.${styles.categoryCardWrapper}`);
-    storeData.category.forEach((card) => wrapper.appendChild(CategoryCard(card)));
+    categories.forEach((card) => wrapper.appendChild(CategoryCard(card)));
 }
 
 const CategorySection = () => {

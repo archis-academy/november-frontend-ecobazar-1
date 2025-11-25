@@ -2,13 +2,15 @@ import styles from "./Testimonials.module.scss";
 import TestimonialCard from "./TestimonialCard";
 import SliderButton from "./SliderButton";
 import testData from "@/seed/testData";
+import { storeData } from "@/services/store";
 
 const renderCards = (container) => {
+    const {comments} = storeData;
     const wrapper = container.querySelector(`.${styles.testCardWrapper}`);
     const groupWrapper = container.querySelector(`.${styles.testGroupWrapper}`);
 
-    for (let data of testData) {
-        groupWrapper.appendChild(TestimonialCard(data));
+    for (let comment of comments) {
+        groupWrapper.appendChild(TestimonialCard(comment));
     }
 
     const buttonWrapper = container.querySelector(`.${styles.testSliderBtnWrapper}`);

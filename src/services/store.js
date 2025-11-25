@@ -1,4 +1,4 @@
 export const storeData = {
-  category: [],
-  testimonials: [],
+  categories: [],
+  comments: [],
 };

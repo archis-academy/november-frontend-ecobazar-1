@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getCategories = async () => {
     try {
-        const response = await axios.get(`${API}/category`);
+        const response = await axios.get(`${API}/categories`);
         return response.data;
     }
     catch (err) {
@@ -12,9 +12,9 @@ export const getCategories = async () => {
 };
 
 
-export const getTestimonials = async ()=> {
+export const getComments = async ()=> {
     try {
-        const response = await axios.get(`${API}/testimonials`);
+        const response = await axios.get(`${API}/comments`);
         return response.data;
 
     } catch (error) {

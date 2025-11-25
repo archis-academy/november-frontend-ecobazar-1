@@ -2,20 +2,19 @@
 @use "@/styles/_functions.scss" as *;
 
 .card {
+    padding: pxToRem(24);
+    background: $White-color;
+    border-radius: pxToRem(8);
     width: $Testimonials-card-width;
+    font-family: $Body-large-poppins;
     max-width: $Testimonials-card-width;
     min-width: $Testimonials-card-width;
-    font-family: $Body-large-poppins;
-    padding: 24px;
-    background: white;
-    border-radius: pxToRem(8);
     box-shadow: 0px 10px 20px 0px #00000003;
-    flex: 1;
 
     &Content {
         display: flex;
-        flex-direction: column;
         gap: pxToRem(16);
+        flex-direction: column;
 
         img {
             width: 32px;
@@ -25,29 +24,29 @@
 
 
     &Text {
+        color: $Testimonials-text-color;
         font-weight: 400;
-        font-size: 14px;
         line-height: 150%;
         letter-spacing: 0%;
-        color: #4D4D4D;
+        font-size: pxToRem(14);
     }
 
     &Footer {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
     }
 
     &Person {
         display: flex;
-        align-items: center;
         gap: pxToRem(12);
+        align-items: center;
 
         img {
             width: 56px;
             height: 56px;
-            border-radius: 100%;
             object-fit: cover;
+            border-radius: 100%;
         }
     }
 
@@ -58,25 +57,24 @@
 
     &PersonName {
         font-weight: 500;
-        font-size: 16px;
         line-height: 150%;
         letter-spacing: 0%;
         text-align: center;
-        color: #1A1A1A;
+        font-size: pxToRem(16);
+        color: $Text-dark-color;
     }
 
     &PersonDetail {
         font-weight: 400;
-        font-size: 14px;
+        color: #999999;
         line-height: 150%;
         letter-spacing: 0%;
-        color: #999999;
+        font-size: pxToRem(14);
     }
 
-    &StarWrapper{
+    &StarWrapper {
         display: flex;
         gap: 1px;
     }
-
 
 }

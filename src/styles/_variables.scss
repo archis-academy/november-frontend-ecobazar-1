@@ -1,4 +1,3 @@
-
 /**
  * Colors
  * sample: $Titanium-White: #fafafa;
@@ -22,18 +21,20 @@
  */
 
 //  Color
-
+$White-color: #FFFFFF;
+$Light-bg-color: #F2F2F2;
 $Gray-scale: #E6E6E6;
 $Text-dark-color: #1A1A1A;
 $Success-dark-border: #2C742F;
 $Category-card-shadow: #20B52652;
 $Category-view-all-btn: #00B207;
+$Testimonials-text-color: #4D4D4D;
 
 // Font Family
 $Body-large-poppins: 'Poppins';
 
 
 // width
-$Category-card-max-width: 200px;
 $Container-max-width: 1320px;
-$Testimonials-card-width: 422px;
+$Category-card-max-width: 200px;
+$Testimonials-card-width: 424px;
