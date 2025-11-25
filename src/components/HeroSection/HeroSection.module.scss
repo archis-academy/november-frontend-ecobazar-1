@@ -1,10 +1,10 @@
 .parent {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 15px;
-  padding: 40px 80px;
-  max-height: 900px; // Masaüstünde max yükseklik ayarı
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+    padding: 40px 80px;
+    max-height: 600px;
 
   .left {
     grid-column: span 3 / span 3;
@@ -160,6 +160,7 @@
       h1 {
         line-height: 120%;
         font-size: 32px;
+        padding: 0 10px;
       }
       button {
         left: 50%;
