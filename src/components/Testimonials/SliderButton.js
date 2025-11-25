@@ -15,31 +15,25 @@ const handleClick = (e, wrapper) => {
     const groupWidth = groupWrapper.getBoundingClientRect().width;
 
     if (direction === "right") {
-
         if (current === (-1) * (groupWidth * (itemPageCount - 1) + (gapValue * (itemPageCount - 1)))) {
             current = 0;
             groupWrapper.style.transform = `translateX(${current}px)`;
             return;
         }
-
         current = current - (groupWidth + gapValue);
         groupWrapper.style.transform = `translateX(${current}px)`;
     }
 
     if (direction === "left") {
-
         if (current === 0) {
             current = (-1) * (groupWidth * (itemPageCount - 1) + (gapValue * (itemPageCount - 1)));
             groupWrapper.style.transform = `translateX(${current}px)`;
             return;
         }
-
         current = current + (groupWidth + gapValue);
         groupWrapper.style.transform = `translateX(${current}px)`;
     }
-    console.log(current);
 }
-
 
 const SliderButton = ({ color, deg, direction, wrapper }) => {
     const button = document.createElement("button");
