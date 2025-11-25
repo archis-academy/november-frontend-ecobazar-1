@@ -1,0 +1,15 @@
+{
+  "hash": "b700fcde",
+  "configHash": "4336c425",
+  "lockfileHash": "59ddc467",
+  "browserHash": "e2c12fb1",
+  "optimized": {
+    "page": {
+      "src": "../../node_modules/page/page.mjs",
+      "file": "page.js",
+      "fileHash": "ef0539bf",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}

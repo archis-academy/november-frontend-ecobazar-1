@@ -1,11 +1,12 @@
-import Button from "@/components/Button/Button";
-import Welcome from "@/components/Welcome/Welcome";
+import CategorySection from "@/components/CategoryCard/CategorySection";
 import HeroSection from "@/components/HeroSection/HeroSection";
 
 const HomePage = () => {
   const container = document.createElement("div");
-  container.appendChild(Welcome());
-  container.appendChild(HeroSection())
+
+  // category section has been added to Homepage.
+  container.appendChild(HeroSection());
+  container.appendChild(CategorySection());
   return container;
 };
 

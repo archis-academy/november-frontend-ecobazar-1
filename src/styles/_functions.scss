@@ -6,3 +6,9 @@
  *
  * example: a custom background gradient
  * /
+
+ */
+
+@function pxToRem($px, $base: 16) {
+    @return calc($px / $base) * 1rem;
+}
