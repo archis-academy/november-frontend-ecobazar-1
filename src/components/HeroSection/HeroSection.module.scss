@@ -4,7 +4,7 @@
   grid-template-rows: repeat(6, 1fr);
   gap: 15px;
   padding: 40px 80px;
-  max-height: 900px; // Masaüstünde max yükseklik ayarı
+  max-height: 900px; 
 
   .left {
     grid-column: span 3 / span 3;
@@ -87,7 +87,7 @@
   .rightTop {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
-    grid-column-start: 4; // Masaüstü için
+    grid-column-start: 4; 
     position: relative;
     font-family: Poppins, sans-serif;
 
@@ -130,9 +130,9 @@
   .rightBottom {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
-    grid-column-start: 4; // Masaüstü için
+    grid-column-start: 4; 
     position: relative;
-    grid-row-start: 3; // Masaüstü için
+    grid-row-start: 3; 
     text-align: center;
     color: rgba(255, 255, 255, 1);
 
@@ -176,10 +176,10 @@
     border-radius: 10px;
   }
 
-  // --- RESPONSIVE AYARLAR ---
+  
 
   @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr); // 2 sütun
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     padding: 30px 40px;
     gap: 10px;
@@ -198,14 +198,13 @@
     .rightBottom {
       grid-column: 2 / 3;
       grid-row: auto;
-      grid-column-start: unset; /* Masaüstü atamasını kaldır */
-      grid-row-start: unset; /* Masaüstü atamasını kaldır */
+      grid-column-start: unset; 
+      grid-row-start: unset; 
     }
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; // Tek sütun
-    grid-template-rows: auto;
+    grid-template-columns: 1fr; 
     padding: 20px;
 
     .left,
@@ -223,7 +222,7 @@
       text-align: center;
     }
     .left {
-      min-height: 350px; // Mobil için min yükseklik
+      min-height: 350px; 
       .leftContent {
         padding-left: 20px;
         h1 {
@@ -234,7 +233,7 @@
 
     .rightTop .rightTopContent,
     .rightBottom .rightBottomContent {
-      padding: 20px; // İçerik padding'i küçültme
+      padding: 20px; 
       h1 {
         font-size: 24px;
       }
