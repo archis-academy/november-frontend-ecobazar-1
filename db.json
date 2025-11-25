@@ -244,5 +244,147 @@
       },
       "id": "14"
     }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Taze havuçlar geldi",
+      "body": "Bahçeden taze toplanan havuçlar sofralara ulaştı. Vitamin açısından oldukça zengin olan havuçlar, salatalarda ve yemeklerde kullanılıyor.",
+      "topic": "Food",
+      "category": "Vegetables",
+      "commentCount": 65,
+      "createdDate": "2025-11-25T08:30:00Z",
+      "writer": {
+        "id": 3,
+        "firstName": "Arda",
+        "lastName": "Demir"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Elmalar bu sezon bol",
+      "body": "Kırmızı ve yeşil elmalar pazarlarda yerini aldı. Tatlı ve ekşi seçenekleri ile tüketicilere farklı alternatifler sunuyor.",
+      "topic": "Food",
+      "category": "Fruits",
+      "commentCount": 42,
+      "createdDate": "2025-11-24T10:15:00Z",
+      "writer": {
+        "id": 4,
+        "firstName": "Elif",
+        "lastName": "Yılmaz"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Yeni somon balığı geldi",
+      "body": "Norveç'ten ithal edilen somonlar taze olarak satışa sunuldu. Omega-3 açısından oldukça zengin olan somon, sağlıklı beslenme için ideal.",
+      "topic": "Food",
+      "category": "Meat & Fish",
+      "commentCount": 33,
+      "createdDate": "2025-11-23T14:00:00Z",
+      "writer": {
+        "id": 5,
+        "firstName": "Murat",
+        "lastName": "Kaya"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Domates sezonu açıldı",
+      "body": "Yerli domatesler pazarlarda ve marketlerde boy gösteriyor. Salatalarda, soslarda ve yemeklerde kullanımı oldukça yaygın.",
+      "topic": "Food",
+      "category": "Vegetables",
+      "commentCount": 21,
+      "createdDate": "2025-11-22T09:45:00Z",
+      "writer": {
+        "id": 6,
+        "firstName": "Selin",
+        "lastName": "Arslan"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Muz fiyatları düştü",
+      "body": "Tropikal bölgelerden gelen muzlar uygun fiyatlarla satışa sunuldu. Tatlı ve sağlıklı atıştırmalık olarak tercih ediliyor.",
+      "topic": "Food",
+      "category": "Fruits",
+      "commentCount": 54,
+      "createdDate": "2025-11-21T11:30:00Z",
+      "writer": {
+        "id": 7,
+        "firstName": "Can",
+        "lastName": "Öztürk"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Kırmızı ette indirim",
+      "body": "Marketlerde dana ve kuzu etinde indirim yapıldı. Protein açısından zengin olan et, sofraların vazgeçilmezi.",
+      "topic": "Food",
+      "category": "Meat & Fish",
+      "commentCount": 38,
+      "createdDate": "2025-11-20T13:20:00Z",
+      "writer": {
+        "id": 8,
+        "firstName": "Ayşe",
+        "lastName": "Polat"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Biberler taze ve renkli",
+      "body": "Yeşil, kırmızı ve sarı biberler taze olarak satışa çıktı. Yemeklerde ve salatalarda renkli sunumlar için ideal.",
+      "topic": "Food",
+      "category": "Vegetables",
+      "commentCount": 27,
+      "createdDate": "2025-11-19T08:50:00Z",
+      "writer": {
+        "id": 9,
+        "firstName": "Emre",
+        "lastName": "Taş"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Çilek sezonu başladı",
+      "body": "Taze çilekler pazarlarda yerini aldı. Vitamin deposu çilekler tatlılar ve smoothie’ler için harika bir seçenek.",
+      "topic": "Food",
+      "category": "Fruits",
+      "commentCount": 49,
+      "createdDate": "2025-11-18T10:05:00Z",
+      "writer": {
+        "id": 10,
+        "firstName": "Derya",
+        "lastName": "Şahin"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Levrekler taze geldi",
+      "body": "Denizden yeni çıkarılan levrekler satışa sunuldu. Izgara ve buğulama yöntemleriyle sofralara lezzet katıyor.",
+      "topic": "Food",
+      "category": "Meat & Fish",
+      "commentCount": 31,
+      "createdDate": "2025-11-17T15:10:00Z",
+      "writer": {
+        "id": 11,
+        "firstName": "Baran",
+        "lastName": "Çelik"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Marullar seralarda yetişti",
+      "body": "Yeşil marullar seralarda hızlı bir şekilde yetiştirildi. Salatalarda ve sandviçlerde taze olarak tüketiliyor.",
+      "topic": "Food",
+      "category": "Vegetables",
+      "commentCount": 29,
+      "createdDate": "2025-11-16T09:40:00Z",
+      "writer": {
+        "id": 12,
+        "firstName": "Zeynep",
+        "lastName": "Kurt"
+      }
+    }
   ]
 }
