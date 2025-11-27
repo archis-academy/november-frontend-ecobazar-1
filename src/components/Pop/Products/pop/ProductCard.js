@@ -11,9 +11,9 @@ const popularProducts = {
   bagIcon: "/public/images/Bag.svg", // çanta ikonu
 };
 
-export function RenderProduct() {
-  const app = document.getElementById("app");
-  app.innerHTML = `
+export function ProductCard() {
+  const card = document.createElement("div");
+  card.innerHTML = `
     <div class="product-card">
     <div class="sale-label">${popularProducts.sale}</div>
 
@@ -40,4 +40,5 @@ export function RenderProduct() {
     </div>
     </div>
   `;
+  return card;
 }
