@@ -1,0 +1,154 @@
+@import "../../styles/variables";
+
+.LatestNewsSection {
+  padding: 40px 100px;
+  font-family: Poppins;
+
+  .title {
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.newsContainer {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+
+  .card {
+    flex: 1 1 0%; /* Eşit genişlik için (flex-grow: 1, flex-shrink: 1, flex-basis: 0) */
+    min-width: 0; /* İçeriğin kartı büyütmesini engeller */
+    border: 1px solid $Gray-scale;
+    border-radius: 8px;
+    display: grid;
+    gap: 10px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.08);
+
+      .content {
+        .body {
+          color: $Success-dark-border;
+        }
+      }
+      .image {
+        .date {
+          opacity: 1;
+        }
+      }
+    }
+
+    .image {
+      width: 100%;
+      height: 0;
+      padding-bottom: 76.4%; /* 324px / 424px oranını korur */
+      position: relative;
+      overflow: hidden;
+
+      .date {
+        position: absolute;
+        bottom: 20px;
+        opacity: 0.85;
+        display: grid;
+        text-align: center;
+        background-color: $White-color;
+        left: 20px;
+        padding: 5px 10px;
+        border-radius: 4px;
+
+        .day {
+          font-size: 20px;
+          font-weight: 500;
+          color: $Text-dark-color;
+        }
+        .month {
+          font-size: 12px;
+          font-weight: 500;
+          color: $Gray-scale-dark;
+        }
+      }
+
+      img {
+        /* Padding ile oluşturulan alanı doldurur */
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+    }
+
+    .content {
+      padding: 10px 24px;
+      display: grid;
+      gap: 10px;
+
+      .body {
+        color: $Text-dark-color;
+        font-weight: 500;
+        font-family: Poppins;
+        font-size: 18px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        span {
+          padding: 5px 0;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          color: $dark-gray;
+          font-size: 14px;
+        }
+      }
+    }
+
+    button {
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .LatestNewsSection {
+    padding: 30px 40px;
+  }
+
+  .newsContainer {
+    gap: 20px;
+  }
+
+  .card {
+    .content {
+      .body {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .LatestNewsSection {
+    padding: 20px;
+  }
+
+  .newsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    .card {
+      /* Flexbox özelliği yerine grid'i doldursun */
+      flex: unset;
+    }
+  }
+}

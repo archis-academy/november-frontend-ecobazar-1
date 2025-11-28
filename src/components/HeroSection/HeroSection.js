@@ -54,7 +54,7 @@ const HeroSection = () => {
                 <small>BEST DEAL</small>
                 <h1>Special Products Deal of the Month</h1>
 
-                <button-right-bottom-placeholder></button-right-bottom-placeholder>
+                <button-right-bottom-placeholder> </button-right-bottom-placeholder>
             </div>
         </div>
     </div>
