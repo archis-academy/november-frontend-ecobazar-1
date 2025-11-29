@@ -6,9 +6,10 @@ const HomePage = () => {
   const container = document.createElement("div");
 
   // category section has been added to Homepage.
+  container.appendChild(Header());
   container.appendChild(HeroSection());
   container.appendChild(CategorySection());
-  container.appendChild(Header());
+  
    return container;
 };
 

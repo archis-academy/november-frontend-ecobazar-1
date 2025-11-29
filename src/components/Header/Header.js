@@ -4,7 +4,7 @@ import heartIcon from "@images/Header/heart.svg";
 import locationIcon from "@images/Header/location.svg";
 import logoIcon from "@images/Header/logo.svg";
 import searchIcon from "@images/Header/search.svg";
-import cartIcon from "@images/Header/cart.svg";
+//import cartIcon from "@images/Header/cart.svg";
 
 const Header = () => {
   const header = document.createElement("header");
@@ -42,7 +42,7 @@ const Header = () => {
 
           <div class="${styles.cart}">
               <button class="${styles.cartBtn}">
-                 <img src="${cartIcon}" alt="cart" class="${styles.icon}" />
+                 <img src="${""}" alt="cart" class="${styles.icon}" />
               </button>
               <span class="${styles.cartTotal}">$57.00</span>
           </div>
