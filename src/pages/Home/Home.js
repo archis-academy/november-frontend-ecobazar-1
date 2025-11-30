@@ -6,8 +6,8 @@ const HomePage = () => {
   const container = document.createElement("div");
 
   // category section has been added to Homepage.
-  container.appendChild(HeroSection());
-  container.appendChild(CategorySection());
+  // container.appendChild(HeroSection());
+  // container.appendChild(CategorySection());
   container.appendChild(Testimonials());
 
   return container;

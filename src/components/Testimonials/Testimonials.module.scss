@@ -10,7 +10,7 @@
         gap: pxToRem(32);
         margin-inline: auto;
         flex-direction: column;
-        width: $Container-max-width;
+        max-width: $Container-max-width;
     }
 
     &HeaderWrapper {
@@ -60,6 +60,7 @@
         width: 100%;
         display: flex;
         overflow: hidden;
+        // border: 2px solid blue;
     }
 
     &GroupWrapper {
@@ -69,6 +70,7 @@
         gap: pxToRem(24);
         transition: all 400ms linear;
         transform: translateX(0);
+        // border: 2px solid red;
     }
 
 }
