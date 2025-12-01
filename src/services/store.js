@@ -1,5 +1,9 @@
 export const storeData = {
   categories: [],
   comments: [],
-  wrapperWidth: 1320,
+  testimonials: {
+    wrapperWidth: 1320,
+    cardDefaultWidth: 424,
+    gapValue: 24,
+  },
 };
