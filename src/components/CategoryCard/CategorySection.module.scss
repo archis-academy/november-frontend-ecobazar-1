@@ -1,0 +1,63 @@
+@use "@/styles/_variables.scss" as *;
+@use "@/styles/_functions.scss" as *;
+
+.category {
+    display: flex;
+    gap: pxToRem(32);
+    margin-inline: auto;
+    margin-block: pxToRem(60);
+    flex-direction: column;
+    max-width: $Container-max-width;
+    font-family: $Body-large-poppins;
+
+    &Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &Title {
+        font-weight: 600;
+        font-size: clamp(24px, calc((32 / 1320) * 100vw), 32px);
+        color: $Text-dark-color;
+    }
+
+    &ViewAllBtn {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        color: $Category-view-all-btn;
+        display: flex;
+        gap: pxToRem(12);
+        align-items: center;
+    }
+
+    &CardWrapper {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .category {
+        margin-inline: 30px;
+
+        &CardWrapper {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            justify-items: center;
+        }
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .category {
+        margin-inline: 10px;
+    }
+
+}

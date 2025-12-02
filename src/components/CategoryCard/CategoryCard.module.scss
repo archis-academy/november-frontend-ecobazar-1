@@ -3,16 +3,15 @@
 
 .card {
     display: flex;
-    gap: pxToRem(16);
-    width: fit-content;
-    padding-block: 16px 24px;
-    flex-direction: column;
-    border-radius: pxToRem(5);
-    border: 1px solid $Gray-scale;
-    align-items: center;
     cursor: pointer;
-    margin: 50px;
+    gap: pxToRem(16);
+    max-width: $Category-card-max-width;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 16px 24px;
+    border-radius: pxToRem(5);
     transition: all 200ms ease;
+    border: 1px solid $Gray-scale;
 
     & * {
         pointer-events: none;
@@ -41,7 +40,10 @@
     &.featured {
         border-color: $Success-dark-border;
         box-shadow: 0px 0px 12px 0px $Category-card-shadow;
+        
+        .cardBody .cardName {
+            color: $Success-dark-border;
+        }
     }
-
 
 }

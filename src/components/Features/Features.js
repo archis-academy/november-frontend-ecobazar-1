@@ -3,7 +3,7 @@ export default function RenderFeaturesSection() {
   const section = document.createElement("section");
   section.className = "features-wrapper";
   section.innerHTML = `
-    <div class="features-wrapper">
+    
       <section class="features">
         <div class="feature-box">
           <img src="/images/delivery-truck-1.svg" alt="" />
