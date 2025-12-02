@@ -4,7 +4,7 @@ import heartIcon from "@images/Header/heart.svg";
 import locationIcon from "@images/Header/location.svg";
 import logoIcon from "@images/Header/logo.svg";
 import searchIcon from "@images/Header/search.svg";
-//import sepetIcon from "@images/Header/cart.svg";
+import sepetIcon from "@images/Header/sepet.svg";
 
 const Header = () => {
   const header = document.createElement("header");
@@ -20,15 +20,27 @@ header.innerHTML = `
         <span>Store Location: Lincoln - 344, Illinois, Chicago, USA</span>
       </div>
 
-      <div class="${styles.language}">
-        Eng
-        <img src="${arrowIcon}" alt="arrow" class="${styles.arrowIcon}" />
-      </div>
+<div class="${styles.language}" id="language-btn">
+  <span>English</span>
+  <img src="${arrowIcon}" alt="arrow" class="${styles.arrowIcon}" />
 
-      <div class="${styles.currency}">
-        USD
-        <img src="${arrowIcon}" alt="arrow" class="${styles.arrowIcon}" />
-      </div>
+  <ul class="${styles.dropdown}">
+    <li data-lang="en">English</li>
+    <li data-lang="tr">Türkçe</li>
+    <li data-lang="de">Deutsch</li>
+  </ul>
+</div>
+
+<div class="${styles.currency}" id="currency-btn">
+  <span>USD</span>
+  <img src="${arrowIcon}" alt="arrow" class="${styles.arrowIcon}" />
+
+  <ul class="${styles.dropdown}">
+    <li data-currency="usd">USD</li>
+    <li data-currency="eur">EUR</li>
+    <li data-currency="gbp">GBP</li>
+  </ul>
+</div>
 
       <div class="${styles.auth}">
         <a href="#">Sign In</a> / <a href="#">Sign Up</a>
@@ -58,8 +70,8 @@ header.innerHTML = `
       </button>
 
       <div class="${styles.cart}">
-        <button class="${styles.cartBtn}">
-          <img src="${""}" alt="cart" class="${styles.icon}" />
+        <button class="${styles.sepetIconBtn}">
+          <img src="${sepetIcon}" alt="sepet" class="${styles.icon}" />
         </button>
         <span class="${styles.cartTotal}">$57.00</span>
       </div>
@@ -73,3 +85,35 @@ header.innerHTML = `
 };
 
 export default Header;
+
+
+export const initHeaderEvents = () => {
+  const langBtn = document.getElementById("language-btn");
+  const currencyBtn = document.getElementById("currency-btn");
+
+  function setupDropdown(btn) {
+    if (!btn) return;
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      btn.classList.toggle(styles.active);
+    });
+
+    const items = btn.querySelectorAll("li");
+
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        btn.querySelector("span").innerText = item.innerText;
+        btn.classList.remove(styles.active);
+      });
+    });
+  }
+
+  setupDropdown(langBtn);
+  setupDropdown(currencyBtn);
+
+  document.addEventListener("click", () => {
+    langBtn?.classList.remove(styles.active);
+    currencyBtn?.classList.remove(styles.active);
+  });
+};
