@@ -9,12 +9,8 @@ const HomePage = () => {
   container.appendChild(HeroSection());
   container.appendChild(RenderFeaturesSection());
 
-  // category section has been added to Homepage.
   container.appendChild(NewsletterPopup());
-  container.appendChild(HeroSection());
   container.appendChild(CategorySection());
-
-  // category section has been added to Homepage.
   container.appendChild(Testimonials());
 
   return container;
