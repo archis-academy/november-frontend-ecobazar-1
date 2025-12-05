@@ -2,23 +2,20 @@ import { API } from "./restConfiguration";
 import axios from "axios";
 
 export const getCategories = async () => {
-    try {
-        const response = await axios.get(`${API}/categories`);
-        return response.data;
-    }
-    catch (err) {
-        console.error(err);
-    }
+  try {
+    const response = await axios.get(`${API}/categories`);
+    return response.data;
+  } catch (err) {
+    console.error(err);
+  }
 };
 
-
-export const getComments = async ()=> {
-    try {
-        const response = await axios.get(`${API}/comments`);
-        return response.data;
-
-    } catch (error) {
-        console.log(error);
-        throw new Error(error);
-    }
-}
+export const getComments = async () => {
+  try {
+    const response = await axios.get(`${API}/comments`);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw new Error(error);
+  }
+};

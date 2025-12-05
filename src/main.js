@@ -11,7 +11,6 @@ page("/", async () => {
   storeData.comments = await getComments();
   app.innerHTML = "";
   app.appendChild(HomePage());
-  
 });
 
 page();
