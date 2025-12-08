@@ -3,6 +3,7 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import NewsletterPopup from "@/components/NewsletterPopup/NewsletterPopup";
 import RenderFeaturesSection from "@/components/Features/Features";
+import Footer from "@/components/Footer/Footer";
 
 const HomePage = () => {
   const container = document.createElement("div");
@@ -12,6 +13,8 @@ const HomePage = () => {
   container.appendChild(NewsletterPopup());
   container.appendChild(CategorySection());
   container.appendChild(Testimonials());
+
+  container.appendChild(Footer());
 
   return container;
 };
