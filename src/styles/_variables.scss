@@ -1,4 +1,3 @@
-
 /**
  * Colors
  * sample: $Titanium-White: #fafafa;
@@ -22,17 +21,19 @@
  */
 
 //  Color
-
-$Gray-scale: #E6E6E6;
-$Text-dark-color: #1A1A1A;
-$Success-dark-border: #2C742F;
-$Category-card-shadow: #20B52652;
-$Category-view-all-btn: #00B207;
+$White-color: #ffffff;
+$Light-bg-color: #f2f2f2;
+$Gray-scale: #e6e6e6;
+$Text-dark-color: #1a1a1a;
+$Success-dark-border: #2c742f;
+$Category-card-shadow: #20b52652;
+$Category-view-all-btn: #00b207;
+$Testimonials-text-color: #4d4d4d;
 
 // Font Family
-$Body-large-poppins: 'Poppins';
-
+$Body-large-poppins: "Poppins";
 
 // width
-$Category-card-max-width: 200px;
 $Container-max-width: 1320px;
+$Category-card-max-width: 200px;
+$Testimonials-card-width: 424px;

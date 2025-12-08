@@ -1,0 +1,233 @@
+@charset "UTF-8";
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 15px;
+  padding: 40px 80px;
+  max-height: 900px;
+}
+.parent .left {
+  grid-column: span 3/span 3;
+  grid-row: span 4/span 4;
+  position: relative;
+}
+.parent .left img {
+  -o-object-position: left center;
+     object-position: left center;
+}
+.parent .left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0)) 50%;
+  pointer-events: none;
+  border-radius: 10px;
+}
+.parent .left .leftContent {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  z-index: 2;
+  padding-left: 50px;
+  font-family: Poppins, sans-serif;
+  color: rgb(255, 255, 255);
+}
+.parent .left .leftContent h1 {
+  font-size: 48px;
+  line-height: 120%;
+  max-width: 600px;
+}
+.parent .left .delivery {
+  border-left: 2px solid rgb(132, 209, 135);
+  padding-left: 10px;
+}
+.parent .left .sale {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.parent .left .sale h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.parent .left .sale span {
+  background-color: rgb(255, 138, 0);
+  padding: 4px 12px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.parent .left .shipping p {
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.8;
+  padding-top: 5px;
+}
+.parent button {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-weight: 600;
+}
+.parent button img {
+  width: 19px;
+  height: 12px;
+}
+.parent .rightTop {
+  grid-column: span 2/span 2;
+  grid-row: span 2/span 2;
+  grid-column-start: 4;
+  position: relative;
+  font-family: Poppins, sans-serif;
+}
+.parent .rightTop button {
+  padding-top: 5px;
+}
+.parent .rightTop button img {
+  transform: none;
+}
+.parent .rightTop img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  transform: scaleX(-1);
+}
+.parent .rightTop .rightTopContent {
+  color: rgb(26, 26, 26);
+  position: absolute;
+  top: 0px;
+  padding: 30px;
+  display: grid;
+  gap: 5px;
+}
+.parent .rightTop .rightTopContent h4 {
+  font-size: 14px;
+  letter-spacing: 3%;
+  font-weight: 500;
+}
+.parent .rightTop .rightTopContent h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+}
+.parent .rightTop .rightTopContent p {
+  color: rgb(102, 102, 102);
+  font-weight: 400;
+  font-size: 14px;
+}
+.parent .rightBottom {
+  grid-column: span 2/span 2;
+  grid-row: span 2/span 2;
+  grid-column-start: 4;
+  position: relative;
+  grid-row-start: 3;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.parent .rightBottom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 38, 3, 0.8);
+  pointer-events: none;
+  border-radius: 10px;
+}
+.parent .rightBottom .rightBottomContent {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: grid;
+  gap: 8px;
+}
+.parent .rightBottom .rightBottomContent small {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3%;
+}
+.parent .rightBottom .rightBottomContent h1 {
+  line-height: 120%;
+  font-size: 32px;
+}
+.parent .rightBottom .rightBottomContent button {
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+.parent img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+@media (max-width: 1024px) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    padding: 30px 40px;
+    gap: 10px;
+  }
+  .parent .left {
+    grid-column: 1/-1;
+    grid-row: auto;
+  }
+  .parent .rightTop {
+    grid-column: 1/2;
+    grid-row: auto;
+    grid-column-start: unset;
+  }
+  .parent .rightBottom {
+    grid-column: 2/3;
+    grid-row: auto;
+    grid-column-start: unset; /* Masaüstü atamasını kaldır */
+    grid-row-start: unset; /* Masaüstü atamasını kaldır */
+  }
+}
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 20px;
+  }
+  .parent .left,
+  .parent .rightTop,
+  .parent .rightBottom {
+    grid-column: 1/-1;
+    grid-row: auto;
+    max-height: 200px;
+  }
+  .parent .rightBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .parent .left {
+    min-height: 350px;
+  }
+  .parent .left .leftContent {
+    padding-left: 20px;
+  }
+  .parent .left .leftContent h1 {
+    font-size: 32px;
+  }
+  .parent .rightTop .rightTopContent,
+  .parent .rightBottom .rightBottomContent {
+    padding: 20px;
+  }
+  .parent .rightTop .rightTopContent h1,
+  .parent .rightBottom .rightBottomContent h1 {
+    font-size: 24px;
+  }
+  .parent .rightBottom .rightBottomContent h1 {
+    font-size: 28px;
+  }
+}/*# sourceMappingURL=HeroSection.module.css.map */

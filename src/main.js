@@ -1,13 +1,15 @@
 import page from "page";
 import HomePage from "@pages/Home/Home";
 import "./main.scss";
-import { getCategories } from "./services/services";
+import { getCategories, getComments, getProducts } from "./services/services";
 import { storeData } from "./services/store";
 
 const app = document.querySelector("#app");
 
 page("/", async () => {
-  storeData.category = await getCategories();
+  storeData.categories = await getCategories();
+  storeData.comments = await getComments();
+  storeData.products = await getProducts();
   app.innerHTML = "";
   app.appendChild(HomePage());
 });

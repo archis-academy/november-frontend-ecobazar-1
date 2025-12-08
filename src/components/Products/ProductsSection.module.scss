@@ -1,7 +1,7 @@
 @use "@/styles/_variables.scss" as *;
 @use "@/styles/_functions.scss" as *;
 
-.category {
+.products {
   display: flex;
   gap: pxToRem(32);
   margin-inline: auto;
@@ -40,9 +40,8 @@
     gap: 24px;
   }
 }
-
 @media screen and (max-width: 1024px) {
-  .category {
+  .products {
     margin-inline: 30px;
 
     &CardWrapper {
@@ -51,9 +50,8 @@
     }
   }
 }
-
 @media screen and (max-width: 640px) {
-  .category {
+  .products {
     margin-inline: 10px;
   }
 }

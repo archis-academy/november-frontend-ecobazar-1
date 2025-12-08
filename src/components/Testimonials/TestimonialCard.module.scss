@@ -1,0 +1,82 @@
+@use "@/styles/_variables.scss" as *;
+@use "@/styles/_functions.scss" as *;
+
+.card {
+  padding: pxToRem(24);
+  background: $White-color;
+  border-radius: pxToRem(8);
+  font-family: $Body-large-poppins;
+  min-width: $Testimonials-card-width;
+  box-shadow: 0px 10px 20px 0px #00000003;
+
+  &Content {
+    display: flex;
+    gap: pxToRem(16);
+    flex-direction: column;
+
+    img {
+      width: 32px;
+      height: 26px;
+    }
+  }
+
+  &Text {
+    color: $Testimonials-text-color;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    font-size: pxToRem(14);
+  }
+
+  &Footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &Person {
+    display: flex;
+    gap: pxToRem(12);
+    align-items: center;
+
+    img {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+
+  &PersonInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &PersonName {
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    font-size: pxToRem(16);
+    color: $Text-dark-color;
+  }
+
+  &PersonDetail {
+    font-weight: 400;
+    color: #999999;
+    line-height: 150%;
+    letter-spacing: 0%;
+    font-size: pxToRem(14);
+  }
+
+  &StarWrapper {
+    display: flex;
+    gap: 1px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    min-width: 100%;
+  }
+}
