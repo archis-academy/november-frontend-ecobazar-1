@@ -3,7 +3,7 @@ import { account, helps, proxy, categories, payment } from "@/lib/constants";
 
 const renderListItem = (item) => (
     `<li class=${styles.footerColsListItem}>
-        <a href="#">${item}</a>
+        <a href=${item.route}>${item.content}</a>
     </li>`
 )
 
@@ -45,27 +45,27 @@ const Footer = () => {
                     </div>
                 </div>
 
+                <div class=${styles.footerContentColsWrapper}>
+                    <div class=${styles.footerCols}>
+                        <h3 class=${styles.footerColsTitle}>My Account</h3>
+                        ${renderList(account)}
+                    </div>
 
-                <div class=${styles.footerCols}>
-                    <h3 class=${styles.footerColsTitle}>My Account</h3>
-                    ${renderList(account)}
+                    <div class=${styles.footerCols}>
+                        <h3 class=${styles.footerColsTitle}>Helps</h3>
+                    ${renderList(helps)}
+                    </div>
+
+                    <div class=${styles.footerCols}>
+                        <h3 class=${styles.footerColsTitle}>Proxy</h3>
+                        ${renderList(proxy)}
+                    </div>
+
+                    <div class=${styles.footerCols}>
+                        <h3 class=${styles.footerColsTitle}>Categories</h3>
+                        ${renderList(categories)}
+                    </div>
                 </div>
-
-                <div class=${styles.footerCols}>
-                    <h3 class=${styles.footerColsTitle}>Helps</h3>
-                   ${renderList(helps)}
-                </div>
-
-                <div class=${styles.footerCols}>
-                    <h3 class=${styles.footerColsTitle}>Proxy</h3>
-                    ${renderList(proxy)}
-                </div>
-
-                <div class=${styles.footerCols}>
-                    <h3 class=${styles.footerColsTitle}>Categories</h3>
-                    ${renderList(categories)}
-                </div>
-
             </div>
 
             <div class=${styles.footerBanner}>
