@@ -1,11 +1,12 @@
 import "/src/components/Products/products.css";
-import { getProducts } from "../../services/services.js";
+
 import { ProductCard } from "./ProductCard.js";
 import { storeData } from "../../services/store.js";
 import styles from "./ProductsSection.module.scss";
 
 const renderProducts = (container) => {
-  const wrapper = container.querySelector(".products-card-wrapper");
+  const wrapper = container.querySelector(`.${styles.productsCardWrapper}`);
+
   storeData.products.forEach((product) => {
     wrapper.appendChild(ProductCard(product));
   });
@@ -13,7 +14,7 @@ const renderProducts = (container) => {
 
 export const ProductsSection = () => {
   const container = document.createElement("section");
-  container.classList.add("products-section");
+  container.classList.add(styles.products);
 
   container.innerHTML = `
     <div class="${styles.productsHeader}">

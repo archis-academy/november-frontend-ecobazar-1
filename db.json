@@ -395,7 +395,7 @@
       "onSale": true,
       "rating": 4,
       "sale": "Sale 50%",
-      "image": "gruneApfel.png",
+      "image": "grüneApfel.png",
       "bagIcon": "Bag.svg"
     },
     {
@@ -410,9 +410,7 @@
       "price": "$12.00",
       "rating": 4,
       "image": "cabbage.png",
-      "bagIcon": "Bag.svg",
-      "begenIcon": "heart.svg",
-      "detayGorIcon": "eye.svg"
+      "bagIcon": "Bag.svg"
     },
     {
       "name": "Green Lettuce",

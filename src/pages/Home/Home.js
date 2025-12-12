@@ -9,7 +9,6 @@ const HomePage = () => {
   container.appendChild(HeroSection());
   container.appendChild(CategorySection());
 
-  // ProductsSection async olduğu için await gerekir
   container.appendChild(ProductsSection());
 
   return container;

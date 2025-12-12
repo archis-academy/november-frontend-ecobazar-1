@@ -5,7 +5,21 @@ export function ProductCard(product) {
   card.innerHTML = `
     <div class="product-card">
       ${product.onSale ? `<div class="sale-label">${product.sale}</div>` : ""}
-      <img src="${product.image}" alt="${product.name}" class="product-image" />
+
+      <img src="/images/productsImg/${product.image}"alt="${
+    product.name
+  }" class="product-image" />
+
+
+  <!-- ikonlar sadece varsa göster -->
+      <div class="product-icons">
+        
+            <img src="/images/Heart.svg" alt="Favori" class="icon" />
+            <img src="/images/Eye 1.svg" alt="detay" class="icon" />
+            
+        
+      </div>
+  
       <div class="product-info-wrapper">
         <div class="product-info">
           <p class="product-name">${product.name}</p>
@@ -22,7 +36,7 @@ export function ProductCard(product) {
           </div>
         </div>
         <button class="product-icon">
-          <img src="${product.bagIcon}" alt="Bag Icon" />
+          <img src="/images/bags.svg" alt="Bag Icon" />
         </button>
       </div>
     </div>
