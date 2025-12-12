@@ -1,0 +1,219 @@
+@use "@/styles/_variables.scss" as *;
+@use "@/styles/_functions.scss" as *;
+
+
+.footer {
+    background: #1A1A1A;
+    padding-top: 60px;
+
+    &ContentWrapper {
+        margin-inline: auto;
+        max-width: 1248px;
+        font-family: $Body-large-poppins;
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(60);
+    }
+
+    &ContentInner {
+        display: flex;
+        gap: 112px;
+    }
+
+    &Col1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 336px;
+
+        &Title {
+            font-weight: 500;
+            line-height: 38px;
+            letter-spacing: -3%;
+            color: #ffffff;
+            display: flex;
+            gap: pxToRem(8);
+            font-size: clamp(24px, calc((32/1320)*100vw), 32px);
+        }
+
+        &TextContent {
+            font-size: 14px;
+            font-weight: 400;
+            color: #808080;
+            line-height: 150%;
+            letter-spacing: 0%;
+        }
+
+        &Contact {
+            display: flex;
+            gap: pxToRem(16);
+        }
+
+        &Phone {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            color: #fff;
+            text-decoration: underline;
+            text-decoration-color: #20B526;
+            text-underline-offset: 16px;
+            text-decoration-thickness: 1.5px;
+        }
+
+        &Or {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            color: #808080;
+        }
+
+        &Email {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            color: #fff;
+            text-decoration: underline;
+            text-decoration-color: #20B526;
+            text-underline-offset: 16px;
+            text-decoration-thickness: 1.5px;
+        }
+    }
+
+    &ContentColsWrapper {
+        gap: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "account helps proxy categories";
+    }
+
+    &Cols {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(20);
+
+        &Title {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            color: #fff;
+        }
+
+        &List {
+            display: flex;
+            gap: pxToRem(12);
+            list-style: none;
+            flex-direction: column;
+
+            &Item {
+                a {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 150%;
+                    letter-spacing: 0%;
+                    text-decoration: none;
+                    color: #808080;
+                    transition: color 200ms ease-in-out, text-shadow 200ms ease-in-out;
+
+                    &:hover {
+                        color: #fff;
+                        text-shadow: 0px 0px 5px #fff;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(1) {
+            grid-area: account;
+        }
+
+        &:nth-child(2) {
+            grid-area: helps;
+        }
+
+        &:nth-child(3) {
+            grid-area: proxy;
+        }
+
+        &:nth-child(4) {
+            grid-area: categories;
+        }
+    }
+
+    &Banner {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #333333;
+
+        &Text {
+            font-size: 14px;
+            font-weight: 400;
+            color: #808080;
+            line-height: 150%;
+            letter-spacing: 0%;
+        }
+
+        &Payment {
+            display: flex;
+            gap: pxToRem(8);
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .footer {
+
+        &ContentInner {
+            margin-inline: 40px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &ContentColsWrapper {
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "account helps"
+                "proxy categories";
+            gap: 20px;
+        }
+
+        &Col1 {
+            gap: pxToRem(16);
+            margin-bottom: pxToRem(20);
+            align-self: flex-start;
+            max-width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .footer {
+        &ContentInner {
+            margin-inline: 20px;
+        }
+
+        &ContentColsWrapper {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "account"
+                "helps"
+                "proxy"
+                "categories";
+            gap: 20px;
+        }
+
+        &Banner {
+            flex-direction: column;
+            gap: pxToRem(8);
+        }
+    }
+}

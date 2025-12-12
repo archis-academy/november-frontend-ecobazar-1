@@ -6,12 +6,12 @@ const showPopup = (container) => {
 
     setTimeout(() => {
         container.classList.add(styles.showPopup);
-    }, 5000); // Show popup after 2 seconds
+    }, 5000); // Show popup after 5 seconds
 };
 
 const handleClose = (event) => {
-    const popup = event.target.closest(`#newsletterPopup`);
-    popup.classList.remove(styles.showPopup);
+    const container = event.target.closest(`#newsletterPopup`);
+    container.classList.remove(styles.showPopup);
 }
 
 const handleCheckboxChange = (event) => {

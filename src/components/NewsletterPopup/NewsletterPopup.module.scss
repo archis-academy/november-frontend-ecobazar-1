@@ -9,12 +9,12 @@
     height: 100vh;
     display: flex;
     opacity: 0;
-    visibility: hidden;
     position: fixed;
+    visibility: hidden;
     align-items: center;
     justify-content: center;
-    transition: opacity visibility 0.2s ease-in-out;
     background-color: rgba(0, 0, 0, 0.8);
+    transition: opacity visibility 0.2s ease-in-out;
 
     &Popup {
         width: 872px;
@@ -23,12 +23,12 @@
         gap: pxToRem(40);
         overflow-y: auto;
         max-height: 90vh;
-        padding: pxToRem(10);
+        transform: scale(0);
         margin: pxToRem(20);
+        padding: pxToRem(10);
         background: $White-color;
         border-radius: pxToRem(8);
         grid-template-columns: auto auto;
-        transform: scale(0);
         transition: transform 0.2s ease-in-out;
     }
 
@@ -57,6 +57,9 @@
         cursor: pointer;
         width: 25px;
         height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &Title {
@@ -168,6 +171,13 @@
 
         * {
             margin-bottom: pxToRem(15);
+        }
+
+        &CloseBtn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 20px 15px;
         }
     }
 
