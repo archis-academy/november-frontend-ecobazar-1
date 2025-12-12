@@ -1,0 +1,174 @@
+@use "@/styles/_variables.scss" as *;
+@use "@/styles/_functions.scss" as *;
+
+.newsletter {
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    transition: opacity visibility 0.2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    &Popup {
+        width: 872px;
+        display: grid;
+        max-width: 872px;
+        gap: pxToRem(40);
+        overflow-y: auto;
+        max-height: 90vh;
+        padding: pxToRem(10);
+        margin: pxToRem(20);
+        background: $White-color;
+        border-radius: pxToRem(8);
+        grid-template-columns: auto auto;
+        transform: scale(0);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &Image {
+        width: 354px;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: pxToRem(8);
+            object-fit: cover;
+        }
+    }
+
+    &Text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &CloseBtn {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        font-size: pxToRem(25);
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+    }
+
+    &Title {
+        text-align: center;
+        font-weight: 600;
+        color: $Text-dark-color;
+        margin-top: pxToRem(20);
+        margin-bottom: pxToRem(12);
+        font-family: $Body-large-poppins;
+        font-size: clamp(24px, calc((40 / 872) * 100vw), 40px);
+    }
+
+    &Description {
+        color: #808080;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: center;
+        font-size: pxToRem(16);
+        margin-bottom: pxToRem(24);
+        font-family: $Body-large-poppins;
+    }
+
+    &MoneyText {
+        color: #FF8A00;
+        font-weight: 600;
+        line-height: 120%;
+    }
+
+    &Form {
+        position: relative;
+        margin-bottom: pxToRem(49);
+
+        input {
+            width: 100%;
+            height: 49px;
+            border-radius: pxToRem(46);
+            border: 1px solid #E6E6E6;
+            padding: 14px 24px 14px 24px;
+        }
+
+        button {
+            right: 0;
+            border: none;
+            width: 147px;
+            height: 49px;
+            cursor: pointer;
+            position: absolute;
+            color: $White-color;
+            background: #00B207;
+            border-radius: pxToRem(43);
+        }
+    }
+
+    &Checkbox {
+        display: flex;
+        gap: pxToRem(6);
+        align-items: center;
+        justify-content: center;
+        margin-bottom: pxToRem(49);
+
+        * {
+            cursor: pointer;
+        }
+
+
+        input {
+            width: 20px;
+            height: 20px;
+        }
+
+        label {
+            color: #666666;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            font-family: $Body-large-poppins;
+        }
+    }
+
+}
+
+.showPopup {
+    opacity: 1;
+    visibility: visible;
+
+    .newsletterPopup {
+        transform: scale(1);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .newsletter {
+        position: fixed;
+
+        &Popup {
+            grid-template-columns: auto;
+            gap: pxToRem(20);
+            align-self: flex-start;
+        }
+
+        &Image {
+            width: 100%;
+            height: 100%;
+        }
+
+        * {
+            margin-bottom: pxToRem(15);
+        }
+    }
+
+}
