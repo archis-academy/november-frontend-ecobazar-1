@@ -1,41 +1,42 @@
-import axios from "axios";
 import style from "./LatestNews.module.scss";
 import Button from "../Button/Button";
+import { storeData } from "@/services/store";
+import { getNews } from "@/services/services";
 
 const LatestNews = () => {
-  const LatestNewsSection = document.createElement("section");
-  LatestNewsSection.className = `${style.LatestNewsSection}`;
-
-  LatestNewsSection.innerHTML = `
+  const section = document.createElement("section");
+  section.className = style.LatestNewsSection;
+  section.innerHTML = `
     <div class="${style.newsSection}">
       <div class="${style.title}"><h1>Latest News</h1></div>
       <div class="${style.newsContainer}"></div>
     </div>
   `;
 
-  const newsContainer = LatestNewsSection.querySelector(`.${style.newsContainer}`);
+  const container = section.querySelector(`.${style.newsContainer}`);
 
-  axios.get("http://localhost:3001/news").then((res) => {
-    const allNews = res.data;
-    const uniqueCategories = new Set();
-    const latestNews = [];
-
-    for (const item of allNews) {
-      if (!uniqueCategories.has(item.category)) {
-        latestNews.push(item);
-        uniqueCategories.add(item.category);
-        if (latestNews.length === 3) break;
-      }
+  const render = (news = []) => {
+    if (!news.length) {
+      container.innerHTML = "";
+      return;
     }
 
-    newsContainer.innerHTML = latestNews
+    const latest = [];
+    const seen = new Set();
+    for (const item of news) {
+      if (seen.has(item.category)) continue;
+      latest.push(item);
+      seen.add(item.category);
+      if (latest.length === 3) break;
+    }
+
+    container.innerHTML = latest
       .map((item) => {
-        const day = new Date(item.createdDate).getDate();
-        const month = new Date(item.createdDate).toLocaleString("en-US", {
-          month: "short",
-        });
-        const shortBody =
-          item.body.length > 100 ? item.body.substring(0, 100) + "..." : item.body;
+        const date = new Date(item.createdDate);
+        const day = date.getDate();
+        const month = date.toLocaleString("en-US", { month: "short" });
+        const body =
+          item.body.length > 100 ? `${item.body.slice(0, 100)}...` : item.body;
 
         return `
           <div class="${style.card}">
@@ -46,17 +47,13 @@ const LatestNews = () => {
                 <span class="${style.month}">${month}</span>
               </div>
             </div>
-
             <div class="${style.content}">
               <div class="${style.tags}">
-                <span><img src="/src/images/latest-news-images/tag.svg"/>${item.topic}</span>
-                <span><img src="/src/images/latest-news-images/person.svg"/>By Admin</span>
-                <span><img src="/src/images/latest-news-images/comment.svg"/> ${item.commentCount} comment</span>
+                <span><img src="/src/images/latest-news-images/tag.svg" />${item.topic}</span>
+                <span><img src="/src/images/latest-news-images/person.svg" />By Admin</span>
+                <span><img src="/src/images/latest-news-images/comment.svg" /> ${item.commentCount} comment</span>
               </div>
-              <p class="${style.body}">
-                ${shortBody}
-              </p>
-              <!-- Burada sadece boş bir button placeholder bırakıyoruz -->
+              <p class="${style.body}">${body}</p>
               <button class="${style.button}"></button>
             </div>
           </div>
@@ -64,19 +61,25 @@ const LatestNews = () => {
       })
       .join("");
 
-    const buttonEls = newsContainer.querySelectorAll(`.${style.button}`);
+    container.querySelectorAll(`.${style.button}`).forEach((btn) =>
+      btn.replaceWith(
+        Button({
+          content: `Read More <img src="/src/images/button-images/right-arrow-ecobazar.svg" alt="Right Arrow" />`,
+          variant: "outline",
+        })
+      )
+    );
+  };
 
-    buttonEls.forEach((btnEl) => {
-      const newButton = Button({
-        content: `Read More <img src="/src/images/button-images/right-arrow-ecobazar.svg" alt="Right Arrow" />`,
-        variant: "outline",
-      });
+  if (storeData.news?.length) {
+    render(storeData.news);
+  } else {
+    getNews()
+      .then(render)
+      .catch(() => render([]));
+  }
 
-      btnEl.replaceWith(newButton);
-    });
-  });
-
-  return LatestNewsSection;
+  return section;
 };
 
 export default LatestNews;
