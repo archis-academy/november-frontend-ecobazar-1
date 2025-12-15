@@ -7,26 +7,26 @@ $text-black: #111;
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #fff;
-  padding: 30px;
+  padding: 30 px;
 }
 
 
 .brand-strip {
-  max-width: 1320px;
-  height: 110px;
-  margin: 0 auto;
-  border: 2px solid $border-color;
+  max-width: 1320 px;
+  height: 110 px ;
+  margin: 0 auto ;
+  border: 2 px solid $border-color;
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 24 px;
   box-sizing: border-box;
 
   /* steps */
   &__steps {
     color: $steps-green;
-    font-size: 28px;
+    font-size: 28 px;
     font-family: "Segoe Script", cursive;
-    margin-right: 36px;
+    margin-right: 36 px;
     white-space: nowrap;
   }
 
@@ -34,8 +34,8 @@ body {
   &__logos {
     display: flex;
     align-items: center;
-    gap: 48px;
-    flex: 1;
+    gap: 48 px;
+    flex: 1 ;
     overflow-x: auto;
 
     &::-webkit-scrollbar {
@@ -50,7 +50,7 @@ body {
     justify-content: center;
 
     img {
-      max-height: 50px;
+      max-height: 50 px;
       opacity: 0.35;
       filter: grayscale(100%);
       transition: all 0.25s ease;
@@ -65,61 +65,61 @@ body {
 
   &__follow {
     text-align: center;
-    margin-top: 14px;
-    font-size: 28px;
+    margin-top: 14 px;
+    font-size: 28 px;
     font-weight: 600;
     color: $text-black;
   }
 }
 
 /* RESponsive*/
-@media (max-width: 992px) {
+@media (max-width: 992 px) {
   .brand-strip {
-    height: 95px;
-    padding: 0 18px;
+    height: 95 px;
+    padding: 0 18 px;
 
     &__steps {
-      font-size: 22px;
-      margin-right: 20px;
+      font-size: 22 px;
+      margin-right: 20  px;
     }
 
     &__logos {
-      gap: 28px;
+      gap: 28 px;
     }
 
     &__logo img {
-      max-height: 38px;
+      max-height: 38 px;
     }
   }
 
   .brand-strip__follow {
-    font-size: 22px;
+    font-size: 22 px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 576 px) {
   body {
-    padding: 16px;
+    padding: 16   px;
   }
 
   .brand-strip {
-    height: 85px;
-    padding: 0 12px;
+    height: 85 px;
+    padding: 0 12 px;
 
     &__steps {
-      font-size: 20px;
+      font-size: 20 px;
     }
 
     &__logos {
-      gap: 18px;
+      gap: 18 px;
     }
 
     &__logo img {
-      max-height: 32px;
+      max-height: 32 px;
     }
   }
 
   .brand-strip__follow {
-    font-size: 18px;
+    font-size: 18 px;
   }
 }
