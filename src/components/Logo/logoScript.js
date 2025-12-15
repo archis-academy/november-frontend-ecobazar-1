@@ -1,0 +1,125 @@
+
+$border-color: #a8c7d6;
+$logo-gray: #cfcfcf;
+$steps-green: #2fa84f;
+$text-black: #111;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  padding: 30px;
+}
+
+
+.brand-strip {
+  max-width: 1320px;
+  height: 110px;
+  margin: 0 auto;
+  border: 2px solid $border-color;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+
+  /* steps */
+  &__steps {
+    color: $steps-green;
+    font-size: 28px;
+    font-family: "Segoe Script", cursive;
+    margin-right: 36px;
+    white-space: nowrap;
+  }
+
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex: 1;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-height: 50px;
+      opacity: 0.35;
+      filter: grayscale(100%);
+      transition: all 0.25s ease;
+    }
+
+    &:hover img {
+      opacity: 1;
+      filter: none;
+      transform: scale(1.08);
+    }
+  }
+
+  &__follow {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 28px;
+    font-weight: 600;
+    color: $text-black;
+  }
+}
+
+/* RESponsive*/
+@media (max-width: 992px) {
+  .brand-strip {
+    height: 95px;
+    padding: 0 18px;
+
+    &__steps {
+      font-size: 22px;
+      margin-right: 20px;
+    }
+
+    &__logos {
+      gap: 28px;
+    }
+
+    &__logo img {
+      max-height: 38px;
+    }
+  }
+
+  .brand-strip__follow {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding: 16px;
+  }
+
+  .brand-strip {
+    height: 85px;
+    padding: 0 12px;
+
+    &__steps {
+      font-size: 20px;
+    }
+
+    &__logos {
+      gap: 18px;
+    }
+
+    &__logo img {
+      max-height: 32px;
+    }
+  }
+
+  .brand-strip__follow {
+    font-size: 18px;
+  }
+}
