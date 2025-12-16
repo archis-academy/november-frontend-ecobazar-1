@@ -27,3 +27,13 @@ export const getComments = async () => {
     throw new Error(error);
   }
 };
+
+export const getNews = async () => {
+  try {
+    const { data } = await axios.get(`${API}/news`);
+    return data;
+  } catch (err) {
+    console.error(err);
+    return [];
+  }
+};

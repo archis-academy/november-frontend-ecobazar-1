@@ -1,7 +1,12 @@
 import page from "page";
 import HomePage from "@pages/Home/Home";
 import "./main.scss";
-import { getCategories, getComments, getProducts } from "./services/services";
+import {
+  getCategories,
+  getComments,
+  getProducts,
+  getNews,
+} from "./services/services";
 import { storeData } from "./services/store";
 
 const app = document.querySelector("#app");
@@ -10,6 +15,7 @@ page("/", async () => {
   storeData.categories = await getCategories();
   storeData.comments = await getComments();
   storeData.products = await getProducts();
+  storeData.news = await getNews();
   app.innerHTML = "";
   app.appendChild(HomePage());
 });
