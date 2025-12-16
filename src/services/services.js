@@ -9,6 +9,14 @@ export const getCategories = async () => {
     console.error(err);
   }
 };
+export const getProducts = async () => {
+  try {
+    const response = await axios.get(`${API}/products`);
+    return response.data;
+  } catch (err) {
+    console.error(err);
+  }
+};
 
 export const getComments = async () => {
   try {

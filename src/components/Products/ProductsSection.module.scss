@@ -1,13 +1,18 @@
 @use "@/styles/_variables.scss" as *;
 @use "@/styles/_functions.scss" as *;
 
-.category {
+.products {
   display: flex;
+  max-width: 1320px;
+  width: 100%;
+  height: 714px;
   gap: pxToRem(32);
-  margin-inline: auto;
+  margin: 3rem auto 0 auto;
+  /*margin: 0 auto;*/
+
   margin-block: 15rem (60);
   flex-direction: column;
-  max-width: $Container-max-width;
+  /*max-width: $Container-max-width;*/
   font-family: $Body-large-poppins;
 
   &Header {
@@ -36,13 +41,12 @@
 
   &CardWrapper {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
   }
 }
-
 @media screen and (max-width: 1024px) {
-  .category {
+  .products {
     margin-inline: 30px;
 
     &CardWrapper {
@@ -51,9 +55,8 @@
     }
   }
 }
-
 @media screen and (max-width: 640px) {
-  .category {
+  .products {
     margin-inline: 10px;
   }
 }

@@ -1,0 +1,155 @@
+.product-card {
+  width: 100%;
+  height: 327px;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* animasyon */
+}
+.product-card:hover {
+  transform: translateY(-4px); /* hafif yukarı kalkar */
+  border: 1px solid #2c742f; /* neon yeşil */
+  box-shadow: 0px 0px 12px 0px #20b52652; /* parlayan efekt */
+  cursor: pointer; /* kartın tamamı tıklanabilir gibi görünür */
+}
+.product-card {
+  position: relative;
+}
+.sale-label {
+  background-color: #ea4b48;
+  max-width: 80px;
+  font-family: var(--primary-font);
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  left: 20px; /* biraz sağa kaydırıldı */
+  z-index: 10;
+  height: 27px;
+
+  border-radius: 4px;
+  padding: 3px 8px; /* padding sadeleştirildi */
+  display: flex; /* yazıyı ortalamak için */
+
+  align-items: center; /* dikey ortalama */
+  justify-content: center; /* yatay ortalama */
+  color: #fff; /* yazı rengi kontrast için */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.sale-label:hover {
+  background-color: #ea4b48;
+  transform: scale(1.05); /* hafif büyür */
+  cursor: pointer; /* el işareti çıkar */
+}
+.product-image {
+  width: 100%;
+  height: auto;
+}
+.product-info-wrapper {
+  display: flex;
+  justify-content: space-between; /* sol yazılar - sağ ikon */
+  align-items: center;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column; /* alt alta */
+
+  align-items: flex-start; /* sola hizala */
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.product-icon {
+  border: none;
+  background: #f2f2f2;
+  margin-right: 20px;
+  border-radius: 50px;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.product-icon:hover {
+  background: #2c742f; /* yeşile döner */
+  transform: scale(1.1); /* biraz büyür */
+}
+
+.product-icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.product-icon:hover img {
+  filter: invert(1); /* hover’da ikon beyaz görünür */
+}
+
+.product-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+  opacity: 0; /* başlangıçta görünmez */
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-icons {
+  opacity: 1; /* ürün kartına hover olunca ikonlar görünür */
+}
+
+p {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  color: #4d4d4d;
+  margin-left: 6px;
+  transition: color 0.2s ease; /* yumuşak geçiş için */
+}
+p:hover {
+  color: #33ed12; /* neon yeşil */
+  text-shadow: 0 0 1px #22c904, 0 0 1px #1eb403; /* parlayan efekt */
+}
+h3 {
+  font-family: var(--primary-font);
+}
+.product-rating {
+  color: #ff8a00; /* tüm yıldızlar sarı */
+  font-size: 16px;
+  margin-left: 4px;
+}
+.original-price {
+  color: #999999;
+  text-decoration: line-through;
+  margin-left: 1px;
+}
+.current-price {
+  margin-left: 6px;
+}
+.product-icons {
+  position: absolute;
+  top: 30px;
+  right: 20px; /* sağ yerine sol tarafa */
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px; /* ikonlar arası boşluk */
+}
+
+.product-icons .icon {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.product-icons .icon:hover {
+  transform: scale(1.1);
+}
