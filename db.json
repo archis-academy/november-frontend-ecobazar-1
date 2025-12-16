@@ -269,7 +269,7 @@
       "category": "Fruits",
       "commentCount": 42,
       "createdDate": "2025-11-24T10:15:00Z",
-      "imageUrl":"https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBwbGV8ZW58MHx8MHx8fDA%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBwbGV8ZW58MHx8MHx8fDA%3D",
       "writer": {
         "id": 4,
         "firstName": "Elif",
@@ -284,7 +284,7 @@
       "category": "Meat & Fish",
       "commentCount": 33,
       "createdDate": "2025-11-23T14:00:00Z",
-      "imageUrl":"https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2FsbW9ufGVufDB8fDB8fHww",
+      "imageUrl": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2FsbW9ufGVufDB8fDB8fHww",
       "writer": {
         "id": 5,
         "firstName": "Murat",
@@ -297,7 +297,7 @@
       "body": "Yerli domatesler pazarlarda ve marketlerde boy gösteriyor. Salatalarda, soslarda ve yemeklerde kullanımı oldukça yaygın.",
       "topic": "Food",
       "category": "Vegetables",
-      "imageUrl":"https://images.unsplash.com/photo-1582284540020-8acbe03f4924?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dG9tYXRvfGVufDB8fDB8fHww",
+      "imageUrl": "https://images.unsplash.com/photo-1582284540020-8acbe03f4924?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dG9tYXRvfGVufDB8fDB8fHww",
       "commentCount": 21,
       "createdDate": "2025-11-22T09:45:00Z",
       "writer": {
@@ -314,7 +314,7 @@
       "category": "Fruits",
       "commentCount": 54,
       "createdDate": "2025-11-21T11:30:00Z",
-      "imageUrl":"https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmFuYW5hfGVufDB8fDB8fHww",
+      "imageUrl": "https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmFuYW5hfGVufDB8fDB8fHww",
       "writer": {
         "id": 7,
         "firstName": "Can",
@@ -328,7 +328,7 @@
       "topic": "Food",
       "category": "Meat & Fish",
       "commentCount": 38,
-      "imageUrl":"https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVhdHxlbnwwfHwwfHx8MA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVhdHxlbnwwfHwwfHx8MA%3D%3D",
       "createdDate": "2025-11-20T13:20:00Z",
       "writer": {
         "id": 8,
@@ -343,7 +343,7 @@
       "topic": "Food",
       "category": "Vegetables",
       "commentCount": 27,
-      "imageUrl":"https://images.unsplash.com/photo-1526346698789-22fd84314424?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVwcGVyfGVufDB8fDB8fHww",
+      "imageUrl": "https://images.unsplash.com/photo-1526346698789-22fd84314424?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVwcGVyfGVufDB8fDB8fHww",
       "createdDate": "2025-11-19T08:50:00Z",
       "writer": {
         "id": 9,
@@ -357,7 +357,7 @@
       "body": "Taze çilekler pazarlarda yerini aldı. Vitamin deposu çilekler tatlılar ve smoothie’ler için harika bir seçenek.",
       "topic": "Food",
       "category": "Fruits",
-      "imageUrl":"https://images.unsplash.com/photo-1587393855524-087f83d95bc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3RyYXdiZXJyeXxlbnwwfHwwfHx8MA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1587393855524-087f83d95bc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3RyYXdiZXJyeXxlbnwwfHwwfHx8MA%3D%3D",
       "commentCount": 49,
       "createdDate": "2025-11-18T10:05:00Z",
       "writer": {
@@ -370,7 +370,7 @@
       "id": 9,
       "title": "Levrekler taze geldi",
       "body": "Denizden yeni çıkarılan levrekler satışa sunuldu. Izgara ve buğulama yöntemleriyle sofralara lezzet katıyor.",
-      "imageUrl":"https://images.unsplash.com/photo-1576330383200-2bf325cfec52?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VhJTIwYmFzc3xlbnwwfHwwfHx8MA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1576330383200-2bf325cfec52?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VhJTIwYmFzc3xlbnwwfHwwfHx8MA%3D%3D",
       "topic": "Food",
       "category": "Meat & Fish",
       "commentCount": 31,
@@ -386,7 +386,7 @@
       "title": "Marullar seralarda yetişti",
       "body": "Yeşil marullar seralarda hızlı bir şekilde yetiştirildi. Salatalarda ve sandviçlerde taze olarak tüketiliyor.",
       "topic": "Food",
-      "imageUrl":"https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGV0dHVjZXxlbnwwfHwwfHx8MA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGV0dHVjZXxlbnwwfHwwfHx8MA%3D%3D",
       "category": "Vegetables",
       "commentCount": 29,
       "createdDate": "2025-11-16T09:40:00Z",

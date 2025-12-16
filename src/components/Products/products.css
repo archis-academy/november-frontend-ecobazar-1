@@ -102,18 +102,18 @@
   opacity: 1; /* ürün kartına hover olunca ikonlar görünür */
 }
 
-p {
+.product-card p {
   font-family: var(--primary-font);
   font-size: 14px;
   color: #4d4d4d;
   margin-left: 6px;
   transition: color 0.2s ease; /* yumuşak geçiş için */
 }
-p:hover {
+.product-card p:hover {
   color: #33ed12; /* neon yeşil */
   text-shadow: 0 0 1px #22c904, 0 0 1px #1eb403; /* parlayan efekt */
 }
-h3 {
+.product-card h3 {
   font-family: var(--primary-font);
 }
 .product-rating {
