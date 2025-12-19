@@ -1,0 +1,65 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/functions" as *;
+
+.slider {
+
+    &PriceRange {
+        display: grid;
+        position: relative;
+
+        input {
+            grid-row: 2;
+            grid-column: 1;
+            appearance: none;
+            pointer-events: none;
+            background: transparent;
+
+            &::-webkit-slider-thumb {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                appearance: none;
+                border-radius: 50%;
+                pointer-events: auto;
+                background: red;
+            }
+        }
+
+        &Progress {
+            position: absolute;
+            height: 10px;
+            width: 100%;
+            background: #F0F0F0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 20px;
+            z-index: -9;
+            overflow: hidden;
+
+            &Inner {
+                position: absolute;
+                background: red;
+                width: 10%;
+                height: 100%;
+            }
+        }
+    }
+
+    &ValuesWrapper {
+        width: 100%;
+        position: relative;
+
+        * {
+            position: absolute;
+            top: 10px;
+            // font-family: var(--font-satoshi);
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+    }
+
+
+}

@@ -1,0 +1,108 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/functions" as *;
+
+
+.productPage {
+    max-width: $Container-max-width;
+    margin-inline: auto;
+}
+
+.filterAside {
+    max-width: 312px;
+    color: #1A1A1A;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+
+    &Header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: pxToRem(20);
+        cursor: pointer;
+
+        * {
+            pointer-events: none;
+            user-select: none;
+        }
+
+        &Title {
+            font-family: $Body-large-poppins;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            letter-spacing: 0%;
+        }
+
+        &Arrow {
+            transition: transform 150ms linear;
+        }
+
+    }
+
+    &List {
+        display: flex;
+        flex-direction: column;
+        height: 303px;
+        transition: height 150ms linear, opacity 150ms linear;
+
+        &Item {
+            display: flex;
+            gap: pxToRem(8);
+            padding-block: 10px;
+
+            font-family: $Body-large-poppins;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0%;
+
+            &Count {
+                color: #808080;
+            }
+
+            * {
+                cursor: pointer;
+            }
+
+            &Radio {
+                width: 20px;
+                height: 20px;
+                outline: none;
+                cursor: pointer;
+                appearance: none;
+                border-radius: 50%;
+                border: 2px solid #00B207;
+            }
+
+            &Radio:checked {
+                background-color: #00B207;
+                outline: 2px solid #00B207;
+                outline-offset: 3px;
+            }
+
+            &:nth-child(1) {
+                padding-bottom: pxToRem(10);
+            }
+
+            &:last-child {
+                padding-block: 10px 26px;
+            }
+
+        }
+    }
+}
+
+.dropdownClosed {
+    .dropdownList {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .dropdownHeaderArrow {
+        transform: rotate(180deg);
+    }
+}
