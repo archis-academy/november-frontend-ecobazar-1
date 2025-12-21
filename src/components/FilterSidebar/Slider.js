@@ -53,16 +53,22 @@ const Slider = () => {
     slider.classList.add(styles.slider);
 
     slider.innerHTML = `
-    <div class=${styles.sliderPriceRange}>
-        <input class="min-input" type="range" min="0" max="1000" value="50">
-        <input class="max-input" type="range" min="0" max="1000" value="750">
-        <div class=${styles.sliderPriceRangeProgress}>
-            <div class=${styles.sliderPriceRangeProgressInner}></div>
+    <div class=${styles.sliderInner}>
+        <div class=${styles.sliderHeader}>
+            <h3 class=${styles.sliderHeaderTitle}>Price</h3>
+            <img class=${styles.sliderHeaderArrow} src="/icons/dropdown-arrow.png" alt="arrow-icon" />
         </div>
-    </div>
-    <div class=${styles.sliderValuesWrapper}>
-         <span class="min-price"></span>
-        <span class="max-price"></span>
+        <div class=${styles.sliderPriceRange}>
+            <input class="min-input" type="range" min="0" max="1000" value="50">
+            <input class="max-input" type="range" min="0" max="1000" value="750">
+            <div class=${styles.sliderPriceRangeProgress}>
+                <div class=${styles.sliderPriceRangeProgressInner}></div>
+            </div>
+        </div>
+        <div class=${styles.sliderValuesWrapper}>
+            <span class="min-price"></span>
+            <span class="max-price"></span>
+        </div>
     </div>
     `
 

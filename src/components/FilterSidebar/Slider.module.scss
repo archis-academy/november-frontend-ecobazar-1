@@ -4,9 +4,30 @@
 .slider {
     padding-bottom: pxToRem(24);
 
+    &Inner {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(16);
+    }
+
+    &Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding-block: 20px 4px;
+
+        &Arrow {
+            transition: all 200ms linear;
+        }
+
+    }
+
     &PriceRange {
         display: grid;
         position: relative;
+        height: 20px;
+        transition: all 200ms linear;
 
         input {
             grid-row: 2;
@@ -61,6 +82,16 @@
             letter-spacing: 0%;
         }
     }
+}
 
+.dropdownClosed {
+    .sliderPriceRange {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
 
+    .sliderHeaderArrow {
+        transform: rotate(180deg);
+    }
 }

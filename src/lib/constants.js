@@ -74,6 +74,12 @@ const tags = [
     { id: generateId(), content: "Dinner" },
     { id: generateId(), content: "Breakfast" },
     { id: generateId(), content: "Fruit" },
+];
+
+const saleProducts = [
+    { path: "/public/images/sale-1.jpg", name: "Red Capsicum", price: 32.00, oldPrice: 20.99, rate: 4 },
+    { path: "/public/images/sale-2.jpg", name: "Chanise Cabbage", price: 24.00, oldPrice: 20.99, rate: 4 },
+    { path: "/public/images/sale-3.jpg", name: "Green Capsium", price: 32.00, oldPrice: 20.99, rate: 4 },
 ]
 
 export {
@@ -85,4 +91,5 @@ export {
     allCategories,
     ratings,
     tags,
+    saleProducts,
 }
