@@ -1,4 +1,7 @@
+import generateId from "./generateId";
+
 // Footer constants
+
 const account = [
     { route: "account", content: "My Account" },
     { route: "orderhistory", content: "Order History" },
@@ -37,5 +40,49 @@ const payment = [
 ]
 
 
+// filter sidebar constants
 
-export { account, helps, proxy, categories, payment }
+const allCategories = [
+    { id: generateId(), content: "Fresh Fruit", count: 134 },
+    { id: generateId(), content: "Vegetables", count: 150 },
+    { id: generateId(), content: "Cooking", count: 54 },
+    { id: generateId(), content: "Snacks", count: 47 },
+    { id: generateId(), content: "Beverages", count: 43 },
+    { id: generateId(), content: "Beauty & Health", count: 38 },
+    { id: generateId(), content: "Bread & Bakery", count: 15 },
+];
+
+const ratings = [
+    { id: generateId(), rate: 5.0, content: " " },
+    { id: generateId(), rate: 4.0, content: " & up" },
+    { id: generateId(), rate: 3.0, content: " & up" },
+    { id: generateId(), rate: 2.0, content: " & up" },
+    { id: generateId(), rate: 1.0, content: " & up" },
+];
+
+const tags = [
+    { id: generateId(), content: "Healthy" },
+    { id: generateId(), content: "Low fat" },
+    { id: generateId(), content: "Vegetarian" },
+    { id: generateId(), content: "Kid foods" },
+    { id: generateId(), content: "Vitamins" },
+    { id: generateId(), content: "Bread" },
+    { id: generateId(), content: "Meat" },
+    { id: generateId(), content: "Snacks" },
+    { id: generateId(), content: "Tiffin" },
+    { id: generateId(), content: "Launch" },
+    { id: generateId(), content: "Dinner" },
+    { id: generateId(), content: "Breakfast" },
+    { id: generateId(), content: "Fruit" },
+]
+
+export {
+    account,
+    helps,
+    proxy,
+    categories,
+    payment,
+    allCategories,
+    ratings,
+    tags,
+}

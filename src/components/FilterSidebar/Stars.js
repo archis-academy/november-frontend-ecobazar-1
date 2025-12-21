@@ -2,7 +2,7 @@
 let counter = 0;
 
 // add star to card start
-function addStarToCard(rate) {
+function Stars(rate) {
 
     const starArr = [];
 
@@ -15,22 +15,23 @@ function addStarToCard(rate) {
         // yıldızları svg formatında render ediyoruz. linearGradient özelliği doğru çalışması için linearGradient id' si benzersiz olmalı!
         const gradId = `grad${counter}`;
 
-        const star = `<svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        const star = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="${gradId}" x1="0" y1="0" x2="1" y2="0">
-                                <stop offset="0%" stop-color="#FF8A00"/>
-                                <stop offset="${percentage}%" stop-color="#FF8A00"/>
-                                <stop offset="${percentage}%" stop-color="#fff"/>
-                                <stop offset="100%" stop-color="#fff"/>
+                                <stop offset="0%" stop-color="#FFC633"/>
+                                <stop offset="${percentage}%" stop-color="#FFC633"/>
+                                <stop offset="${percentage}%" stop-color="#CCCCCC"/>
+                                <stop offset="100%" stop-color="#CCCCCC"/>
                             </linearGradient>
                         </defs>
-                        <path d="M9.24494 0.255066L11.8641 5.89498L18.0374 6.64316L13.4829 10.877L14.679 16.9793L9.24494 13.9561L3.8109 16.9793L5.00697 10.877L0.452479 6.64316L6.62573 5.89498L9.24494 0.255066Z" fill="url(#FF8A00)"/>
+                        <path d="M9.24494 0.255066L11.8641 5.89498L18.0374 6.64316L13.4829 10.877L14.679 16.9793L9.24494 13.9561L3.8109 16.9793L5.00697 10.877L0.452479 6.64316L6.62573 5.89498L9.24494 0.255066Z" fill="url(#${gradId})"/>
                     </svg>`
 
         starArr.push(star);
     }
 
+
     return starArr.join("");
 }
 
-export { addStarToCard }
+export default Stars;

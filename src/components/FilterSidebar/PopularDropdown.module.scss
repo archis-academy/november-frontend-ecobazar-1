@@ -1,0 +1,69 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/functions" as *;
+
+.popular {
+    padding-bottom: pxToRem(20);
+
+    &Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding-block: pxToRem(20);
+
+        &Arrow {
+            transition: all 200ms linear;
+        }
+    }
+
+    &TagWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: pxToRem(8);
+        list-style: none;
+        height: 152px;
+        opacity: 1;
+        visibility: visible;
+        transition: all 200ms linear;
+
+        &Item {
+
+            input {
+                visibility: hidden;
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            input:checked+label {
+                background: #00B207;
+                color: #fff;
+            }
+
+            label {
+                font-family: $Body-large-poppins;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: 0%;
+                cursor: pointer;
+                padding: 6px 16px;
+                border-radius: pxToRem(30);
+                background: #F2F2F2;
+
+            }
+        }
+    }
+}
+
+.dropdownClosed {
+    .popularTagWrapper {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .popularHeaderArrow {
+        transform: rotate(180deg);
+    }
+}
