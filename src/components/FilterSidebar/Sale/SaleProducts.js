@@ -1,7 +1,7 @@
 import styles from "./SaleProducts.module.scss";
 import { saleProducts } from "@/lib/constants";
-import Stars from "./Stars";
-import { handleCardClick } from "./handle";
+import Stars from "@components/FilterSidebar/Stars";
+import { handleCardClick } from "@components/FilterSidebar/handle";
 
 const saleProductCard = ({ path, name, price, oldPrice, rate }) => {
     const card = `

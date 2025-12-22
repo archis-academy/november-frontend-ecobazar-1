@@ -23,8 +23,6 @@ function updateProgress(minInput, maxInput) {
     minPrice.innerHTML = '$' + minValue;
     maxPrice.innerHTML = '$' + maxValue;
 
-    console.log()
-
 }
 
 function handleMinInputEvent(e, minInput, maxInput) {

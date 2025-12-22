@@ -1,6 +1,6 @@
-import styles from "./PopularDropdown.module.scss";
+import styles from "./PopularDropdown.module.scss"
 import { tags } from "@/lib/constants";
-import { handlePopularClick } from "./handle";
+import { handlePopularClick } from "@components/FilterSidebar/handle";
 
 const listItem = ({ id, content }) => (
     `   <li class= ${styles.popularTagWrapperItem}>

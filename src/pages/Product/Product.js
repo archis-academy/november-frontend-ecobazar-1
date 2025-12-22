@@ -1,4 +1,4 @@
-import ProductPageView from "@/components/FilterSidebar/ProductPageView";
+import ProductPageView from "@/views/productPageView/ProductPageView";
 
 const ProductPage = () => {
     const section = document.createElement("section");

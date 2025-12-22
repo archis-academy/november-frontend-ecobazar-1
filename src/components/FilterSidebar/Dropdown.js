@@ -1,5 +1,5 @@
-import styles from "./FilterSidebar.module.scss";
-import { handleDropdownClick } from "./handle";
+import styles from "./Sidebar/Sidebar.module.scss";
+import { handleDropdownClick } from "./handle"
 import Stars from "./Stars";
 
 const categoriesItem = ({ content, count, rate, id }, type) => (

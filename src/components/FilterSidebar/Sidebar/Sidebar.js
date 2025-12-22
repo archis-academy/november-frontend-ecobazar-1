@@ -1,13 +1,13 @@
-import styles from "./FilterSidebar.module.scss";
-import Dropdown from "./Dropdown";
-import Slider from "./Slider";
+import styles from "./Sidebar.module.scss";
+import Dropdown from "@components/FilterSidebar/Dropdown";
+import Slider from "@components/FilterSidebar/Slider/Slider";
 import { allCategories } from "@/lib/constants";
 import { ratings } from "@/lib/constants";
-import PopularDropdown from "./PopularDropdown";
-import DiscountBox from "./DiscountBox";
-import SaleProducts from "./SaleProducts";
+import PopularDropdown from "@components/FilterSidebar/Popular/PopularDropdown";
+import DiscountBox from "@components/FilterSidebar/DiscountBox/DiscountBox";
+import SaleProducts from "@components/FilterSidebar/Sale/SaleProducts";
 
-const FilterSidebar = () => {
+const Sidebar = () => {
     const filterAside = document.createElement('aside');
     filterAside.classList.add(styles.filterAside);
     filterAside.appendChild(Dropdown('All Categories', allCategories, 'radio'));
@@ -21,4 +21,4 @@ const FilterSidebar = () => {
 }
 
 
-export default FilterSidebar;
+export default Sidebar;
