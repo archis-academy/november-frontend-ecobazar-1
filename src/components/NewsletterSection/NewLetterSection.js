@@ -1,0 +1,108 @@
+//import styles from "./NewLetterSection.module.scss";
+import "@components/NewsletterSection/NewsletterSection.css";
+
+const NewsLetterSection = () => {
+  const section = document.createElement("section");
+  section.classList.add("newsletter");
+
+  section.innerHTML = ` <div class="newsletter__container">
+        <div class="newsletter__text">
+          <h2 class="newsletter__title">Subscribe our Newsletter</h2>
+          <p class="newsletter__subtitle">
+            Pellentesque eu nibh eget mauris congue mattis mattis nec tellus.
+            Phasellus imperdiet elit eu magna.
+          </p>
+        </div>
+
+        <form
+          class="newsletter__form"
+          aria-label="Newsletter subscription"
+          novalidate
+        >
+          <label class="visually-hidden" for="email">Your email address</label>
+          <input
+            id="email"
+            class="newsletter__input"
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            required
+          />
+          <button class="newsletter__button" type="submit">Subscribe</button>
+        </form>
+
+        <ul class="newsletter__social" aria-label="Follow us on social media">
+          <li>
+            <a href="#" aria-label="Facebook" class="social social--facebook">
+              <!--<img src="/public/images/sosyalMediaIcons/facebook 1.svg" alt="" />-->
+              <svg
+                xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+                xmlns:xlink="[http://www.w3.org/1999/xlink](http://www.w3.org/1999/xlink)"
+                version="1.0"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                class="icon icons8-Facebook-Filled"
+              >
+                <path
+                  d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter" class="social social--twitter">
+              <!--<img src="/public/images/sosyalMediaIcons/twitter 1.svg" alt="" />-->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="currentColor"
+              >
+                <path
+                  d="M50 9.5a20.4 20.4 0 0 1-5.9 1.6 10.3 10.3 0 0 0 4.5-5.7 20.6 20.6 0 0 1-6.5 2.5 10.2 10.2 0 0 0-17.4 9.3A29 29 0 0 1 6 7.6a10.2 10.2 0 0 0 3.2 13.6 10.1 10.1 0 0 1-4.6-1.3v0.1a10.2 10.2 0 0 0 8.2 10 10.3 10.3 0 0 1-4.6 0.2 10.2 10.2 0 0 0 9.5 7.1A20.5 20.5 0 0 1 0 42.5a29 29 0 0 0 15.7 4.6c18.8 0 29.1-15.6 29.1-29.1 0-0.4 0-0.8 0-1.2A20.8 20.8 0 0 0 50 9.5z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Pinterest" class="social social--pinterest">
+              <!--<img src="/public/images/sosyalMediaIcons/pinterest 1.svg" alt="" />-->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="currentColor"
+              >
+                <path
+                  d="M25 0C11.2 0 0 11.2 0 25c0 10.6 6.6 19.7 16 23.4-.2-2-.4-5.1.1-7.3.4-1.9 2.6-12.2 2.6-12.2s-.7-1.3-.7-3.2c0-3 1.7-5.3 3.8-5.3 1.8 0 2.7 1.3 2.7 2.9 0 1.8-1.1 4.5-1.6 7-0.5 2.4 1.1 4.4 3.4 4.4 4.1 0 6.9-5.3 6.9-11.5 0-4.7-3.2-8.2-9.1-8.2-6.6 0-10.7 4.9-10.7 10.4 0 1.9.7 3.9 1.6 5 .2.3.2.5.1.8-.1.3-.3 1-0.4 1.1-.1.2-.3.3-.6.2-2.2-.9-3.6-3.7-3.6-7.1 0-5.4 4.6-11.9 13.7-11.9 7.3 0 12.1 5.3 12.1 11.1 0 7.5-4.2 13.1-10.4 13.1-2.1 0-4.1-1.1-4.8-2.4l-1.3 5.1c-.5 2-1.7 4.5-2.5 6.1 1.9.6 3.9.9 6 .9 13.8 0 25-11.2 25-25S38.8 0 25 0z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram" class="social social--instagram">
+              <!--<img src="/public/images/sosyalMediaIcons/instagram 1.svg" alt="" />-->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="currentColor"
+              >
+                <path
+                  d="M25 5c6.6 0 7.4 0 10 0.1 2.6 0.1 4.1 0.5 5.1 0.9 1.3 0.5 2.2 1.1 3.2 2.1 1 1 1.6 1.9 2.1 3.2 0.4 1 0.8 2.5 0.9 5.1 0.1 2.6 0.1 3.4 0.1 10s0 7.4-0.1 10c-0.1 2.6-0.5 4.1-0.9 5.1-0.5 1.3-1.1 2.2-2.1 3.2-1 1-1.9 1.6-3.2 2.1-1 0.4-2.5 0.8-5.1 0.9-2.6 0.1-3.4 0.1-10 0.1s-7.4 0-10-0.1c-2.6-0.1-4.1-0.5-5.1-0.9-1.3-0.5-2.2-1.1-3.2-2.1-1-1-1.6-1.9-2.1-3.2-0.4-1-0.8-2.5-0.9-5.1C5 32.4 5 31.6 5 25s0-7.4 0.1-10c0.1-2.6 0.5-4.1 0.9-5.1 0.5-1.3 1.1-2.2 2.1-3.2 1-1 1.9-1.6 3.2-2.1 1-0.4 2.5-0.8 5.1-0.9C17.6 5 18.4 5 25 5zm0 3c-6.5 0-7.3 0-9.9 0.1-2.4 0.1-3.7 0.5-4.6 0.9-1.2 0.5-2 1.1-2.9 2-0.9 0.9-1.5 1.7-2 2.9-0.4 0.9-0.8 2.2-0.9 4.6C5 17.7 5 18.5 5 25s0 7.3 0.1 9.9c0.1 2.4 0.5 3.7 0.9 4.6 0.5 1.2 1.1 2 2 2.9 0.9 0.9 1.7 1.5 2.9 2 0.9 0.4 2.2 0.8 4.6 0.9 2.6 0.1 3.4 0.1 9.9 0.1s7.3 0 9.9-0.1c2.4-0.1 3.7-0.5 4.6-0.9 1.2-0.5 2-1.1 2.9-2 0.9-0.9 1.5-1.7 2-2.9 0.4-0.9 0.8-2.2 0.9-4.6 0.1-2.6 0.1-3.4 0.1-9.9s0-7.3-0.1-9.9c-0.1-2.4-0.5-3.7-0.9-4.6-0.5-1.2-1.1-2-2-2.9-0.9-0.9-1.7-1.5-2.9-2-0.9-0.4-2.2-0.8-4.6-0.9C32.3 8 31.5 8 25 8zm0 6.1a10.9 10.9 0 1 1 0 21.8 10.9 10.9 0 0 1 0-21.8zm0 3a7.9 7.9 0 1 0 0 15.8 7.9 7.9 0 0 0 0-15.8zm12.3-3.2a2.6 2.6 0 1 1-5.2 0 2.6 2.6 0 0 1 5.2 0z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>`;
+
+  return section;
+};
+export default NewsLetterSection;

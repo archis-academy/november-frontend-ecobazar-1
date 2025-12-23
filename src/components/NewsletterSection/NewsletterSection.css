@@ -52,7 +52,7 @@
   font-family: "Poppins";
   max-width: 480px;
   height: auto;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   text-align: left;
 }
 .newsletter__title {
@@ -60,7 +60,8 @@
   font-weight: 600;
   font-family: "Poppins";
   color: var(--text);
-  margin: 0 0 0.75rem;
+  /*margin: 0 0 0.75rem;*/
+  margin-top: 20px;
 }
 .newsletter__subtitle {
   font-family: "Poppins";
@@ -73,8 +74,10 @@
   grid-column: 1/-1;
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin: 0.6rem 0 0;
+  gap: 4px;
+  margin-right: 45px;
+  margin-top: 5px;
+  /*margin: 0.6rem 0 0;*/
   list-style: none;
   padding: 0;
   transform: translateX(50px);
@@ -146,9 +149,9 @@
 .newsletter__button:hover {
   background: var(--green-dark);
 }
-.newsletter {
-  /* ✅ RESPONSIVE */
-}
+
+/* ✅ RESPONSIVE */
+
 @media (max-width: 900px) {
   .newsletter__container {
     flex-direction: column;
@@ -156,6 +159,7 @@
   }
   .newsletter__text {
     text-align: center;
+    margin-top: auto;
   }
   .newsletter__form {
     display: flex;
@@ -180,8 +184,11 @@
     margin: 0 auto;
   }
   .newsletter__social {
-    justify-content: flex-start;
+    justify-content: center;
     transform: none;
+    margin-bottom: auto;
+    margin-left: 30px;
+    margin-top: 10px;
   }
 }
 
