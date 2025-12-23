@@ -1,0 +1,205 @@
+@charset "UTF-8";
+/**
+ * Colors
+ * sample: $Titanium-White: #fafafa;
+ * /
+
+/** Font Familly
+ * sample: $primary-font: var(--primary-font);
+ */
+/** Screen Breakpoints
+ * sample: $desktop-2xl: pxToRem(1920);
+*/
+/** font-sizes
+ * sample $font-m: pxToRem(18);
+ */
+/**
+ * font-weight
+ * sample $font-regular: 400; 
+ */
+/**
+ * Functions
+ *
+ * Description:
+ * functions are useful when you need to reuse a set of CSS declarations with different values.
+ *
+ * example: a custom background gradient
+ * /
+
+ */
+.newsletter {
+  --bg: #f7f7f7;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --green: #00b207;
+  --green-dark: #16a34a;
+  --border: #e5e7eb;
+  height: auto;
+  background: var(--bg);
+  padding: 3rem 1rem;
+}
+.newsletter__container {
+  max-width: 1320px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.newsletter__text {
+  font-size: clamp(12px, 2vw, 14px);
+  font-family: "Poppins";
+  max-width: 480px;
+  height: auto;
+  margin-bottom: 50px;
+  text-align: left;
+}
+.newsletter__title {
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: 600;
+  font-family: "Poppins";
+  color: var(--text);
+  /*margin: 0 0 0.75rem;*/
+  margin-top: 20px;
+}
+.newsletter__subtitle {
+  font-family: "Poppins";
+  color: var(--muted);
+  font-size: clamp(14px, 3vw, 16px);
+  line-height: 1.6;
+  margin: 0;
+}
+.newsletter__social {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 45px;
+  margin-top: 5px;
+  /*margin: 0.6rem 0 0;*/
+  list-style: none;
+  padding: 0;
+  transform: translateX(50px);
+}
+.newsletter__social .social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: transform 0.15s ease, background 0.15s ease, fill 0.15s ease;
+}
+.newsletter__social .social svg {
+  width: 25px;
+  height: 25px;
+  fill: #4d4d4d;
+  transition: fill 0.15s ease;
+}
+.newsletter__social .social:hover {
+  transform: translateY(-2px);
+  background: #00b207;
+}
+.newsletter__social .social:hover svg {
+  fill: #fff;
+}
+.newsletter__form {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  transform: translateX(-20px);
+}
+.newsletter__input {
+  width: 536px;
+  height: 52px;
+  padding: 0 1rem;
+  border: 1px solid var(--border);
+  transform: translateX(70px);
+  border-radius: 43px;
+  font-size: clamp(14px, 3vw, 16px);
+  background: #fff;
+  color: var(--text);
+}
+.newsletter__input::placeholder {
+  color: #9ca3af;
+}
+.newsletter__input:focus {
+  outline: none;
+  border-color: #00b207;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
+}
+.newsletter__button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) translateX(80px);
+  width: 162px;
+  height: 54px;
+  padding: 0 1.2rem;
+  border: none;
+  border-radius: 43px;
+  background: #00b207;
+  color: #fff;
+  font-weight: 600;
+  font-size: clamp(14px, 3vw, 16px);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.newsletter__button:hover {
+  background: var(--green-dark);
+}
+
+/* ✅ RESPONSIVE */
+
+@media (max-width: 900px) {
+  .newsletter__container {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .newsletter__text {
+    text-align: center;
+    margin-top: auto;
+  }
+  .newsletter__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+  .newsletter__input {
+    width: 100%;
+    transform: none;
+    margin-top: -40px;
+    text-align: center;
+  }
+  .newsletter__button {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .newsletter__social {
+    justify-content: center;
+    transform: none;
+    margin-bottom: auto;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+}
+
+/* Accessibility helper */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=NewsletterSection.css.map */

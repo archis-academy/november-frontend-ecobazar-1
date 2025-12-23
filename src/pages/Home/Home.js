@@ -6,6 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import RenderFeaturesSection from "@/components/Features/Features";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import LatestNews from "@/components/LatestNews/LatestNewsCard";
+import NewsLetterSection from "@/components/NewsletterSection/NewLetterSection";
 
 const HomePage = () => {
   const container = document.createElement("div");
@@ -18,6 +19,7 @@ const HomePage = () => {
   container.appendChild(ProductsSection());
   container.appendChild(LatestNews());
   container.appendChild(Testimonials());
+  container.appendChild(NewsLetterSection());
   container.appendChild(Footer());
 
   container.appendChild(NewsletterPopup());
