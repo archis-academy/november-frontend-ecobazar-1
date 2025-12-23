@@ -1,16 +1,8 @@
 import styles from "./Sidebar/Sidebar.module.scss";
 import { handleDropdownClick } from "./handle"
-import Stars from "./Stars";
 
-const categoriesItem = ({ content, count, rate, id }, type) => (
-    `<li class=${styles.dropdownListItem}>   
-        <input class=${type === 'radio' && styles.dropdownListItemRadio} type=${type} id=${id} name=${type === 'radio' && 'categories'}/>
-        <label class=${styles.dropdownListItemLabel} for=${id}>${type === 'radio' ? content : rate.toFixed(1)}</label>
-        ${count ? `<span class=${styles.dropdownListItemCount}>(${count})</span>` : `<div class=${styles.rateWrapper}><span class=${styles.starsWrapper}>${Stars(rate)}</span><span>${content}</span></div>`}
-    </li>`
-)
 
-const Dropdown = (triggerText, allCategories, type) => {
+const Dropdown = (triggerText, child) => {
 
     const dropdown = document.createElement('div');
     dropdown.classList.add(styles.dropdown);
@@ -20,9 +12,9 @@ const Dropdown = (triggerText, allCategories, type) => {
             <h2 class= ${styles.dropdownHeaderTitle}>${triggerText}</h2>
             <img class=${styles.dropdownHeaderArrow} src="/icons/dropdown-arrow.png" alt="arrow-icon" />
         </div>
-        <ul class=${styles.dropdownList}>
-            ${allCategories.map((listItem) => categoriesItem(listItem, type)).join("")}
-        </ul>
+        <div class=${styles.dropdownList}>
+            ${child()}
+        </div>
     `;
 
     const dropdownTrigger = dropdown.querySelector(`.${styles.dropdownHeader}`);
@@ -31,6 +23,5 @@ const Dropdown = (triggerText, allCategories, type) => {
 
     return dropdown;
 }
-
 
 export default Dropdown;

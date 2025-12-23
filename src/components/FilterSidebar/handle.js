@@ -1,13 +1,18 @@
 import dropdownStyles from "./Sidebar/Sidebar.module.scss";
-import popularStyles from "./Popular/PopularDropdown.module.scss";
 import cardStyles from "./Sale/SaleProducts.module.scss";
 
 const handleDropdownClick = (e, dropdown) => {
+    const dropdownList = dropdown.querySelector(`.${dropdownStyles.dropdownList}`);
+    const height = dropdownList.scrollHeight;
     dropdown.classList.toggle(dropdownStyles.dropdownClosed);
-}
 
-const handlePopularClick = (e, popular) => {
-    popular.classList.toggle(popularStyles.dropdownClosed);
+    if (dropdown.classList.contains(dropdownStyles.dropdownClosed)) {
+        dropdownList.style.height = `0px`;
+        return;
+    }
+
+    dropdownList.style.height = height + 'px';
+
 }
 
 const handleCardClick = (e, sale) => {
@@ -20,4 +25,4 @@ const handleCardClick = (e, sale) => {
     e.target.classList.add(cardStyles.cardClicked);
 }
 
-export { handleDropdownClick, handlePopularClick, handleCardClick };
+export { handleDropdownClick, handleCardClick };

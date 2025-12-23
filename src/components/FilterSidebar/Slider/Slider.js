@@ -1,3 +1,4 @@
+import { handleDropdownClick } from "../handle";
 import styles from "./Slider.module.scss";
 
 function updateProgress(minInput, maxInput) {
@@ -63,10 +64,6 @@ const Slider = () => {
                 <div class=${styles.sliderPriceRangeProgressInner}></div>
             </div>
         </div>
-        <div class=${styles.sliderValuesWrapper}>
-            <span class="min-price"></span>
-            <span class="max-price"></span>
-        </div>
     </div>
     `
 
@@ -74,6 +71,8 @@ const Slider = () => {
     const maxInput = slider.querySelector('.max-input');
     minInput.addEventListener('input', (e) => handleMinInputEvent(e, minInput, maxInput));
     maxInput.addEventListener('input', (e) => handleMaxInputEvent(e, minInput, maxInput));
+    const trigger = slider.querySelector(`.${styles.sliderHeader}`);
+    trigger.addEventListener('click', (e) => handleDropdownClick(e, slider));
 
     return slider;
 }

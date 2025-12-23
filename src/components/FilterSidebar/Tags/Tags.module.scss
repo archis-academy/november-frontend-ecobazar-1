@@ -1,0 +1,39 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/functions" as *;
+
+
+.tagWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: pxToRem(8);
+    padding-block: pxToRem(10);
+}
+
+.dropdownListItem {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.dropdownListItemTag {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+
+    &:checked+.dropdownListItemTagLabel {
+        background: #00B207;
+        color: #FFFFFF;
+    }
+}
+
+.dropdownListItemTagLabel {
+    padding: 6px 16px;
+    color: #1A1A1A;
+    border-radius: pxToRem(30);
+    background: #F2F2F2;
+    cursor: pointer;
+    user-select: none;
+    transition: all 150ms linear;
+}

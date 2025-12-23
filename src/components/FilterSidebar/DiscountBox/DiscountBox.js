@@ -5,6 +5,7 @@ const DiscountBox = () => {
     discountBox.classList.add(styles.discount);
 
     discountBox.innerHTML = `
+        <img class=${styles.discountImage} src="/images/discount-image.jpg" alt="discount-image" />
         <div class=${styles.discountInner}>
             <div class=${styles.discountInnerHeader}>
                 <h2 class=${styles.discountInnerHeaderTitle}>
@@ -16,8 +17,8 @@ const DiscountBox = () => {
             <div class=${styles.discountInnerLink}>
                 <a href="#">
                     Shop Now
-                    <img src="/icons/shop-now-icon.svg" alt="shop-now-icon" />
                 </a>
+                <img src="/icons/shop-now-icon.svg" alt="shop-now-icon" />
             </div>
         </div>
     `;

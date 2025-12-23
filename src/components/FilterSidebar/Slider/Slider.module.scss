@@ -74,7 +74,6 @@
         * {
             position: absolute;
             top: 10px;
-            // font-family: var(--font-satoshi);
             font-weight: 500;
             font-style: Medium;
             font-size: 14px;
@@ -86,7 +85,6 @@
 
 .dropdownClosed {
     .sliderPriceRange {
-        height: 0;
         opacity: 0;
         visibility: hidden;
     }
