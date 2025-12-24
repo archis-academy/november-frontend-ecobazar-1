@@ -21,9 +21,6 @@ function updateProgress(minInput, maxInput, progress, minPriceValue, maxPriceVal
     minPriceValue.textContent = `$${minValue}`;
     maxPriceValue.textContent = ` - $${maxValue}`;
 
-
-
-
 }
 
 function handleMinInputEvent(e, minInput, maxInput, progress, minPriceValue, maxPriceValue) {

@@ -1,0 +1,49 @@
+@use "/src/styles/variables.scss" as *;
+@use "/src/styles/functions" as *;
+
+.productPage {
+    max-width: $Container-max-width;
+    width: $Container-max-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: $Body-large-poppins;
+
+    &Header {
+
+        &FilterBtn {
+            background: #00B207;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: pxToRem(12);
+            padding: 14px 32px;
+            border-radius: 43px;
+            border: none;
+            cursor: pointer;
+
+            &Text {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 120%;
+                letter-spacing: 0%;
+            }
+
+            * {
+                pointer-events: none;
+                user-select: none;
+            }
+        }
+    }
+
+    &Content {
+        display: flex;
+
+        &Sidebar {
+            width: fit-content;
+        }
+    }
+
+
+}

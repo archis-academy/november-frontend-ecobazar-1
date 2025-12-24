@@ -1,12 +1,6 @@
 @use "/src/styles/variables" as *;
 @use "/src/styles/functions" as *;
 
-
-.productPage {
-    max-width: $Container-max-width;
-    margin-inline: auto;
-}
-
 .filterAside {
     max-width: 312px;
     color: #1A1A1A;
