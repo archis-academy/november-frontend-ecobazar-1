@@ -14,7 +14,7 @@ const categoriesChild = () => {
     const categoryList = document.createElement('ul');
     categoryList.classList.add(categoriesStyles.categoriesWrapper);
     categoryList.innerHTML = allCategories.map((category) => categoriesItem(category)).join("");
-    return categoryList.outerHTML;
+    return categoryList;
 };
 
 export default categoriesChild;

@@ -13,7 +13,7 @@ const tagsChild = () => {
     const tagList = document.createElement('ul');
     tagList.classList.add(tagStyles.tagWrapper);
     tagList.innerHTML = tags.map((tag) => TagsItem(tag)).join("");
-    return tagList.outerHTML;
+    return tagList;
 };
 
 export default tagsChild;

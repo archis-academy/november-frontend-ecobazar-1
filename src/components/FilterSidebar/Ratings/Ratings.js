@@ -14,7 +14,7 @@ const ratingsChild = () => {
     const ratingList = document.createElement('ul');
     ratingList.classList.add(rateStyles.rateWrapper);
     ratingList.innerHTML = ratings.map(rating => RatingsItem(rating)).join('');
-    return ratingList.outerHTML;
+    return ratingList;
 };
 
 

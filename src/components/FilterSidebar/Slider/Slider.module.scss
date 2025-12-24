@@ -43,53 +43,33 @@
                 appearance: none;
                 border-radius: 50%;
                 pointer-events: auto;
-                background: red;
+                background: #fff;
+                outline: 2px solid #00B207;
             }
         }
 
         &Progress {
-            position: absolute;
-            height: 10px;
-            width: 100%;
-            background: #F0F0F0;
             top: 50%;
-            transform: translateY(-50%);
-            border-radius: 20px;
+            width: 100%;
             z-index: -9;
+            height: 10px;
             overflow: hidden;
+            position: absolute;
+            border-radius: 20px;
+            background: #F0F0F0;
+            transform: translateY(-50%);
 
             &Inner {
                 position: absolute;
-                background: red;
+                background: #00B207;
                 width: 10%;
                 height: 100%;
             }
         }
     }
 
-    &ValuesWrapper {
-        width: 100%;
-        position: relative;
-
-        * {
-            position: absolute;
-            top: 10px;
-            font-weight: 500;
-            font-style: Medium;
-            font-size: 14px;
-            line-height: 100%;
-            letter-spacing: 0%;
-        }
-    }
-}
-
-.dropdownClosed {
-    .sliderPriceRange {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .sliderHeaderArrow {
-        transform: rotate(180deg);
+    &Labels {
+        display: flex;
+        gap: 5px;
     }
 }

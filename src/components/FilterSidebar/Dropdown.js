@@ -12,13 +12,13 @@ const Dropdown = (triggerText, child) => {
             <h2 class= ${styles.dropdownHeaderTitle}>${triggerText}</h2>
             <img class=${styles.dropdownHeaderArrow} src="/icons/dropdown-arrow.png" alt="arrow-icon" />
         </div>
-        <div class=${styles.dropdownList}>
-            ${child()}
-        </div>
+        <div class=${styles.dropdownList}></div>
     `;
 
     const dropdownTrigger = dropdown.querySelector(`.${styles.dropdownHeader}`);
     dropdownTrigger.addEventListener('click', (e) => handleDropdownClick(e, dropdown));
+    const dropdownList = dropdown.querySelector(`.${styles.dropdownList}`);
+    dropdownList.appendChild(child());
 
 
     return dropdown;
