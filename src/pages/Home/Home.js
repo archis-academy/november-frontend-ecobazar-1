@@ -7,6 +7,7 @@ const HomePage = () => {
   // category section has been added to Homepage.
   container.appendChild(HeroSection());
   container.appendChild(CategorySection());
+  container.appendChild(LogoSection());
   return container;
 };
 

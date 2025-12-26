@@ -1,5 +1,6 @@
+
 const brands = [
-    { name :"Steps",img:"/images/Vector(8).png"}
+    { name :"Steps",img:"/images/Vector(8).png"},
   { name: "MANGO", img: "/images/mango-1.png" },
   { name: "Food", img: "/images/Group.png" },
   { name: "FOOD", img: "/images/food.png" },
