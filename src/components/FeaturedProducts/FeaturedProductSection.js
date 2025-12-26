@@ -1,24 +1,29 @@
 import "/src/components/Products/products.css";
 
-import { ProductCard } from "./ProductCard.js";
-import { storeData } from "../../services/store.js";
-import styles from "./ProductsSection.module.scss";
+import { ProductCard } from "../Products/ProductCard.js";
+import { storeData } from "@/services/store.js";
+import styles from "@components/Products/ProductsSection.module.scss";
 
 const renderProducts = (container) => {
   const wrapper = container.querySelector(`.${styles.productsCardWrapper}`);
+  const featuredProducts = storeData.products.filter((product) => {
+    if (product.isFeatured) {
+      return product;
+    }
+  });
 
-  storeData.products.forEach((product) => {
+  featuredProducts.slice(0, 5).forEach((product) => {
     wrapper.appendChild(ProductCard(product));
   });
 };
 
-export const ProductsSection = () => {
+export const FeaturedProductSection = () => {
   const container = document.createElement("section");
   container.classList.add(styles.products);
 
   container.innerHTML = `
     <div class="${styles.productsHeader}">
-      <h1 class="${styles.productsTitle}">Popular Products</h1>
+      <h1 class="${styles.productsTitle}">Featured Products</h1>
       <a class="${styles.productsViewAllBtn}" href="#">
         <span>View All</span>
         <img src="/right-arrow.svg" alt="arrow">
@@ -33,4 +38,4 @@ export const ProductsSection = () => {
   return container;
 };
 
-export default ProductsSection;
+export default FeaturedProductSection;

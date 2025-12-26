@@ -6,6 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import RenderFeaturesSection from "@/components/Features/Features";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import LatestNews from "@/components/LatestNews/LatestNewsCard";
+import FeaturedProductSection from "@/components/FeaturedProducts/FeaturedProductSection";
 
 const HomePage = () => {
   const container = document.createElement("div");
@@ -16,7 +17,9 @@ const HomePage = () => {
   container.appendChild(RenderFeaturesSection());
   container.appendChild(CategorySection());
   container.appendChild(ProductsSection());
+
   container.appendChild(LatestNews());
+  container.appendChild(FeaturedProductSection());
   container.appendChild(Testimonials());
   container.appendChild(Footer());
 
