@@ -406,56 +406,64 @@
       "rating": 4,
       "sale": "Sale 50%",
       "image": "grüneApfel.png",
-      "bagIcon": "Bag.svg"
+      "bagIcon": "Bag.svg",
+      "isFeatured": true
     },
     {
       "name": "Fresh Indian Malta",
       "price": "$20.00",
       "rating": 4,
       "image": "orange.png",
-      "bagIcon": "Bag.svg"
+      "bagIcon": "Bag.svg",
+      "isFeatured": true
     },
     {
       "name": "Chinese cabbage",
       "price": "$12.00",
       "rating": 4,
       "image": "cabbage.png",
-      "bagIcon": "Bag.svg"
+      "bagIcon": "Bag.svg",
+      "isFeatured": true
     },
     {
       "name": "Green Lettuce",
       "price": "$9.00",
       "rating": 4,
       "image": "lettuce.png",
-      "bagIcon": "Bag.svg"
+      "bagIcon": "Bag.svg",
+      "isFeatured": true
     },
     {
       "name": "Eggplant",
       "price": "$34.00",
       "rating": 4,
       "image": "eggplant.png",
-      "bagIcon": "Bag.svg"
+      "bagIcon": "Bag.svg",
+      "isFeatured": true
     },
     {
       "name": "Big Potatoes",
       "price": "$20.00",
       "rating": 4,
       "image": "potatoes.png",
-      "bagIcon": "Bag.svg"
+      "bagIcon": "Bag.svg",
+      "isFeatured": true
     },
     {
       "name": "Corn",
       "price": "$20.00",
       "rating": 4,
       "image": "corn.png",
-      "bagIcon": "Bag.svg"
+      "bagIcon": "Bag.svg",
+      "isFeatured": true
     },
     {
       "name": "Fresh Cauliflower",
       "price": "$12.00",
       "rating": 4,
       "image": "cauliflower.png",
-      "bagIcon": "Bag.svg"
+      "bagIcon": "Bag.svg",
+      "isFeatured": true
     },
     {
       "name": "Green Capsicum",
@@ -465,14 +473,16 @@
       "rating": 4,
       "sale": "Sale 50%",
       "image": "capsicum.png",
-      "bagIcon": "Bag.svg"
+      "bagIcon": "Bag.svg",
+      "isFeatured": true
     },
     {
       "name": "Green Chili",
       "price": "$34.00",
       "rating": 4,
       "image": "chili.png",
-      "bagIcon": "Bag.svg"
+      "bagIcon": "Bag.svg",
+      "isFeatured": true
     }
   ]
 }
