@@ -1,35 +1,42 @@
 
+import styles from './LogoSection.module.scss';
+
 const brands = [
-    { name :"Steps",img:"/images/Vector(8).png"},
-  { name: "MANGO", img: "/images/mango-1.png" },
-  { name: "Food", img: "/images/Group.png" },
-  { name: "FOOD", img: "/images/food.png" },
-  { name: "BOOK-OFF", img: "/images/bookoff-corporation-logo.png" },
-  { name: "G Series", img: "/images/Group(1).png" },
+  { name: "Steps", img: "/logo-images/Steps.png" },
+  { name: "MANGO", img: "/logo-images/Mango.png" },
+  { name: "Food", img: "/logo-images/Group.png" },
+  { name: "FOOD", img: "/logo-images/food.png" },
+  { name: "BOOK-OFF", img: "/logo-images/Bookoff.png" },
+  { name: "G Series", img: "/logo-images/Gseries.png" },
 ];
 
-const container = document.getElementById("brand-strip");
+const LogoSection = () => {
+  const container = document.createElement("div");
+  container.id = "brand-strip";
+  container.innerHTML = `
+    <div class="${styles['brand-strip']}">
+      <span class="${styles['brand-strip__steps']}">Steps</span>
 
-container.innerHTML = `
-  <div class="brand-strip">
-    <span class="brand-strip__steps">steps</span>
-
-    <div class="brand-strip__logos">
-      ${brands
-        .map(
-          (b) => `
-        <div class="brand-strip__logo">
-          <img 
-            src="${b.img}" 
-            alt="${b.name}" 
-            loading="lazy"
-          >
-        </div>
-      `
-        )
-        .join("")}
+      <div class="${styles['brand-strip__logos']}">
+        ${brands
+          .map(
+            (b) => `
+          <div class="${styles['brand-strip__logo']}">
+            <img 
+              src="${b.img}" 
+              alt="${b.name}" 
+              loading="lazy"
+            >
+          </div>
+        `
+          )
+          .join("")}
+      </div>
     </div>
-  </div>
 
-  <p class="brand-strip__follow">Follow us on Instagram</p>
-`;
+    <p class="${styles['brand-strip__follow']}">Follow us on Instagram</p>
+  `;
+  return container;
+};
+
+export default LogoSection;
