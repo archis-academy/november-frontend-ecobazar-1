@@ -1,5 +1,6 @@
 import page from "page";
 import HomePage from "@pages/Home/Home";
+import ProductPage from "./pages/Product/Product";
 import "./main.scss";
 import {
   getCategories,
@@ -19,5 +20,11 @@ page("/", async () => {
   app.innerHTML = "";
   app.appendChild(HomePage());
 });
+
+page("/products", () => {
+  app.innerHTML = "";
+  app.appendChild(ProductPage());
+
+})
 
 page();

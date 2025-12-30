@@ -1,0 +1,75 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/functions" as *;
+
+.slider {
+    padding-bottom: pxToRem(24);
+
+    &Inner {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(16);
+    }
+
+    &Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding-block: 20px 4px;
+
+        &Arrow {
+            transition: all 200ms linear;
+        }
+
+    }
+
+    &PriceRange {
+        display: grid;
+        position: relative;
+        height: 20px;
+        transition: all 200ms linear;
+
+        input {
+            grid-row: 2;
+            grid-column: 1;
+            appearance: none;
+            pointer-events: none;
+            background: transparent;
+
+            &::-webkit-slider-thumb {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                appearance: none;
+                border-radius: 50%;
+                pointer-events: auto;
+                background: #fff;
+                outline: 2px solid #00B207;
+            }
+        }
+
+        &Progress {
+            top: 50%;
+            width: 100%;
+            z-index: -9;
+            height: 10px;
+            overflow: hidden;
+            position: absolute;
+            border-radius: 20px;
+            background: #F0F0F0;
+            transform: translateY(-50%);
+
+            &Inner {
+                position: absolute;
+                background: #00B207;
+                width: 10%;
+                height: 100%;
+            }
+        }
+    }
+
+    &Labels {
+        display: flex;
+        gap: 5px;
+    }
+}

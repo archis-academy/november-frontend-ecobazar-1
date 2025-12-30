@@ -1,0 +1,24 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/functions" as *;
+
+.rateWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: pxToRem(8);
+    list-style: none;
+    padding-bottom: 10px;
+
+    &Item {
+        display: flex;
+        align-items: center;
+        gap: pxToRem(8);
+
+        &Label {
+            display: flex;
+            cursor: pointer;
+        }
+
+    }
+
+}
