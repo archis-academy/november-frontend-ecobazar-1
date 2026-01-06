@@ -15,7 +15,6 @@ const LogoSection = () => {
   container.id = "brand-strip";
   container.innerHTML = `
     <div class="${styles['brand-strip']}">
-      <span class="${styles['brand-strip__steps']}">Steps</span>
 
       <div class="${styles['brand-strip__logos']}">
         ${brands

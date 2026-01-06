@@ -27,6 +27,7 @@ $text-black: #111;
   &__logos {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 100px;
     flex: 1;
     overflow-x: auto;
