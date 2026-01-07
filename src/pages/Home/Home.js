@@ -19,6 +19,7 @@ const HomePage = () => {
   container.appendChild(LatestNews());
   container.appendChild(Testimonials());
   container.appendChild(Footer());
+  container.appendChild(InstaGallery());
 
   container.appendChild(NewsletterPopup());
 
