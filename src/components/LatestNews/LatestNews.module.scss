@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/_variables.scss" as *;
 
 .LatestNewsSection {
   padding: 40px 100px;
@@ -18,9 +18,9 @@
   gap: 30px;
 
   .card {
-    flex: 1 1 0%; /* Eşit genişlik için (flex-grow: 1, flex-shrink: 1, flex-basis: 0) */
-    min-width: 0; /* İçeriğin kartı büyütmesini engeller */
-    border: 1px solid $Gray-scale;
+    flex: 1 1 0%; 
+    border: 1px solid $Light-gray-border;
+    min-width: 0; 
     border-radius: 8px;
     display: grid;
     gap: 10px;
@@ -44,7 +44,7 @@
     .image {
       width: 100%;
       height: 0;
-      padding-bottom: 76.4%; /* 324px / 424px oranını korur */
+      padding-bottom: 76.4%; 
       position: relative;
       overflow: hidden;
 
@@ -72,7 +72,6 @@
       }
 
       img {
-        /* Padding ile oluşturulan alanı doldurur */
         position: absolute;
         top: 0;
         left: 0;
@@ -147,7 +146,6 @@
     gap: 20px;
 
     .card {
-      /* Flexbox özelliği yerine grid'i doldursun */
       flex: unset;
     }
   }

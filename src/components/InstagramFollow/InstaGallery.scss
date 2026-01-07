@@ -1,0 +1,74 @@
+.insta-gallery {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 20px;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__card {
+    position: relative;
+    min-width: 160px;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    &:hover .insta-gallery__overlay {
+      opacity: 1;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    svg {
+      color: #fff;
+      font-size: 32px;
+    }
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .insta-gallery {
+    gap: 12px;
+
+    &__card {
+      min-width: 130px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .insta-gallery {
+    padding: 12px;
+
+    &__card {
+      min-width: 110px;
+      border-radius: 10px;
+    }
+  }
+}
